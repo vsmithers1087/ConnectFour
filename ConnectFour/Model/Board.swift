@@ -1,6 +1,6 @@
 //
 //  Board.swift
-//  PrototypeII
+//  ConnectFour
 //
 //  Created by Vincent Smithers on 14.07.19.
 //  Copyright © 2019 Vincent Smithers. All rights reserved.
@@ -57,6 +57,7 @@ struct Board {
         tiles[column]
     }
     
+    @discardableResult
     mutating func addTile(inColumn column: Int, forState state: TileState) -> Tile? {
         if let emptyRow = tilesFor(column: column).filter({ $0.state == .vacant}).first?.row {
             let tile = Tile(column: column, row: emptyRow, state: state)
