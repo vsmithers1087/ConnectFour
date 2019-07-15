@@ -48,7 +48,6 @@ class BoardTests: XCTestCase {
                 board.addTile(inColumn: count, forState: .playerTwo)
             }
         }
-        board.log()
         let diagnolAscending = board.tilesFor(diagnol: .acending, column: 0, row: 0)
         diagnolAscending.forEach { (t) in
             XCTAssertEqual(t.state, .playerTwo)
@@ -63,18 +62,10 @@ class BoardTests: XCTestCase {
             }
             count -= 1
         }
-        board.log()
         let diagnolAscending = board.tilesFor(diagnol: .acending, column: 6, row: 5)
         diagnolAscending.forEach { (t) in
             print("\(t.column), \(t.row)")
             XCTAssertEqual(t.state, .playerOne)
         }
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-
 }

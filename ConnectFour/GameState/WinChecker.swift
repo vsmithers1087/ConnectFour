@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum GameResult {
+enum GameResult: Equatable {
     case win(TileState)
     case draw
     case inProgress
@@ -28,15 +28,12 @@ struct WinChecker {
         let verticals = board.tilesFor(column: winningTile.column)
         let diagnolsAscending = board.tilesFor(diagnol: .acending, column: winningTile.column, row: winningTile.row)
         let diagnolsDescending = board.tilesFor(diagnol: .descending, column: winningTile.column, row: winningTile.row)
-
         if winningTiles(horizontals) || winningTiles(verticals) || winningTiles(diagnolsAscending) || winningTiles(diagnolsDescending) {
              return .win(winningTile.state)
         }
-        
         if board.tileCount == moveCount {
             return .draw
         }
-        
         return .inProgress
     }
     
@@ -52,5 +49,4 @@ struct WinChecker {
         }
         return isWin
     }
-    
 }

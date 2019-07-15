@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		0B6D50DF22DCC41F002DB955 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B6D50DE22DCC41F002DB955 /* LaunchScreen.storyboard */; };
 		0B6D50E122DCC491002DB955 /* BoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6D50E022DCC491002DB955 /* BoardTests.swift */; };
+		0B6D50E322DCC6D4002DB955 /* WinCheckerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6D50E222DCC6D4002DB955 /* WinCheckerTests.swift */; };
 		0B80590F22DBAA4200A854CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B80590E22DBAA4200A854CE /* AppDelegate.swift */; };
 		0B80591122DBAA4200A854CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B80591022DBAA4200A854CE /* SceneDelegate.swift */; };
 		0B80591522DBAA4300A854CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B80591422DBAA4300A854CE /* Assets.xcassets */; };
-		0B80592622DBAA4300A854CE /* ConnectFourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B80592522DBAA4300A854CE /* ConnectFourTests.swift */; };
 		0B80593122DBAA4300A854CE /* ConnectFourUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B80593022DBAA4300A854CE /* ConnectFourUITests.swift */; };
 		0B80594722DBAA8C00A854CE /* WinChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B80593E22DBAA8B00A854CE /* WinChecker.swift */; };
 		0B80594922DBAA8C00A854CE /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B80594022DBAA8B00A854CE /* RootView.swift */; };
@@ -47,13 +47,13 @@
 /* Begin PBXFileReference section */
 		0B6D50DE22DCC41F002DB955 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B6D50E022DCC491002DB955 /* BoardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardTests.swift; sourceTree = "<group>"; };
+		0B6D50E222DCC6D4002DB955 /* WinCheckerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinCheckerTests.swift; sourceTree = "<group>"; };
 		0B80590B22DBAA4200A854CE /* ConnectFour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConnectFour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B80590E22DBAA4200A854CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B80591022DBAA4200A854CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0B80591422DBAA4300A854CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B80591C22DBAA4300A854CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B80592122DBAA4300A854CE /* ConnectFourTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConnectFourTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0B80592522DBAA4300A854CE /* ConnectFourTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectFourTests.swift; sourceTree = "<group>"; };
 		0B80592722DBAA4300A854CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B80592C22DBAA4300A854CE /* ConnectFourUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConnectFourUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B80593022DBAA4300A854CE /* ConnectFourUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectFourUITests.swift; sourceTree = "<group>"; };
@@ -134,7 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				0B6D50E022DCC491002DB955 /* BoardTests.swift */,
-				0B80592522DBAA4300A854CE /* ConnectFourTests.swift */,
+				0B6D50E222DCC6D4002DB955 /* WinCheckerTests.swift */,
 				0B80592722DBAA4300A854CE /* Info.plist */,
 			);
 			path = ConnectFourTests;
@@ -168,11 +168,11 @@
 		0B80595A22DBAB7300A854CE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0B80595322DBAAB500A854CE /* Column.swift */,
-				0B80594422DBAA8C00A854CE /* FloatingButton.swift */,
 				0B80594022DBAA8B00A854CE /* RootView.swift */,
-				0B80594222DBAA8B00A854CE /* Tile.swift */,
 				0B80594122DBAA8B00A854CE /* TransparentBoard.swift */,
+				0B80595322DBAAB500A854CE /* Column.swift */,
+				0B80594222DBAA8B00A854CE /* Tile.swift */,
+				0B80594422DBAA8C00A854CE /* FloatingButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -349,7 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B6D50E122DCC491002DB955 /* BoardTests.swift in Sources */,
-				0B80592622DBAA4300A854CE /* ConnectFourTests.swift in Sources */,
+				0B6D50E322DCC6D4002DB955 /* WinCheckerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
