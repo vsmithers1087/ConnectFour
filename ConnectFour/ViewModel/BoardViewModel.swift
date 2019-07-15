@@ -12,7 +12,7 @@ import Combine
 final class BoardViewModel: BindableObject {
     
     var didChange = PassthroughSubject<BoardViewModel, Never>()
-    var moveCount = 0
+    private var moveCount = 0
     var board: Board
     
     var state: GameState = .playerOneTurn {
@@ -28,13 +28,10 @@ final class BoardViewModel: BindableObject {
     func dropTile(inColumn column: Int) {
         if let tile = board.addTile(inColumn: column, forState: state.currentTile) {
             updateState(newTile: tile)
-            board.log()
-        } else {
-            print("Column full")
         }
     }
     
-    func updateState(newTile: Tile) {
+    private func updateState(newTile: Tile) {
         let winCheckResult = WinChecker(board: board, winningTile: newTile, moveCount: moveCount).result
         switch winCheckResult {
         case .win(let tileState):

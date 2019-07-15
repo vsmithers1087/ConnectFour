@@ -49,12 +49,23 @@ struct Board {
         return tiles.count * tiles[0].count
     }
     
+    var columnCount: Int {
+        return tiles.count
+    }
+    
     func tilesFor(row: Int) -> [Tile] {
         (0..<tiles.count).map({ tiles[$0][row] })
     }
     
     func tilesFor(column: Int) -> [Tile] {
         tiles[column]
+    }
+    
+    func tilesFor(diagnol: Diagnol, column: Int, row: Int) -> [Tile] {
+        let tile = tiles[column][row]
+        let highTiles = adjacentDiagnols(column: column, row: row, colIncrement: diagnol.highSlope.0, rowIncrement: diagnol.highSlope.1) ?? [Tile]()
+        let lowTiles = adjacentDiagnols(column: column, row: row, colIncrement: diagnol.lowSlope.0, rowIncrement: diagnol.lowSlope.1) ?? [Tile]()
+        return lowTiles + [tile] + highTiles
     }
     
     @discardableResult
@@ -66,14 +77,9 @@ struct Board {
         }
         return nil
     }
-    
-    func tilesFor(diagnol: Diagnol, column: Int, row: Int) -> [Tile] {
-        let tile = tiles[column][row]
-        let highTiles = adjacentDiagnols(column: column, row: row, colIncrement: diagnol.highSlope.0, rowIncrement: diagnol.highSlope.1) ?? [Tile]()
-        let lowTiles = adjacentDiagnols(column: column, row: row, colIncrement: diagnol.lowSlope.0, rowIncrement: diagnol.lowSlope.1) ?? [Tile]()
-        return lowTiles + [tile] + highTiles
-    }
-    
+}
+
+extension Board {
     private func adjacentDiagnols(column: Int, row: Int,  colIncrement: Int, rowIncrement: Int) -> [Tile]? {
         guard
             row + (rowIncrement * 3) >= 0,
@@ -86,7 +92,7 @@ struct Board {
         return [
             tiles[column + colIncrement][row + rowIncrement],
             tiles[column + (colIncrement * 2)][row + (rowIncrement * 2)],
-            tiles[column + (colIncrement * 3)][row + (rowIncrement * 2)]
+            tiles[column + (colIncrement * 3)][row + (rowIncrement * 3)]
         ]
     }
 }

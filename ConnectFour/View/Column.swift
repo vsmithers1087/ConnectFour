@@ -12,7 +12,6 @@ struct Column: View {
     
     @ObjectBinding var boardViewModel: BoardViewModel
     var tiles: [Tile]
-    var tileState: TileState
     
     var column: Int {
         guard let c = tiles.first?.column else {
@@ -23,15 +22,12 @@ struct Column: View {
     
     var body: some View {
         VStack {
-            FloatingButton(tileState: tileState) {
+            FloatingButton(tileState: boardViewModel.state.currentTile) {
                 self.boardViewModel.dropTile(inColumn: self.column)
-                }.padding(EdgeInsets(top: 0, leading: 0, bottom: 50, trailing: 0))
-            tiles[5]
-            tiles[4]
-            tiles[3]
-            tiles[2]
-            tiles[1]
-            tiles[0]
-            }.background(Color.clear)
+            }.padding(EdgeInsets(top: 0, leading: 0, bottom: 50, trailing: 0))
+            ForEach((0...5).reversed()) {
+                self.tiles[$0]
+            }
+        }.background(Color.clear)
     }
 }

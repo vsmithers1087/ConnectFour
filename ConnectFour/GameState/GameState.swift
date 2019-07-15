@@ -9,6 +9,7 @@
 import Foundation
 
 enum GameState {
+    
     case playerOneTurn
     case playerTwoTurn
     case gameOver(GameResult)

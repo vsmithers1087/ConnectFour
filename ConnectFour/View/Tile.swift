@@ -33,7 +33,8 @@ struct Tile: View {
             if state.image != nil {
                 state.image.blendMode(.screen)
             }
-            Circle().stroke(Color.purple, lineWidth: 10)
+            Circle()
+                .stroke(Color.purple, lineWidth: 10)
 
         }.clipShape(Circle())
     }

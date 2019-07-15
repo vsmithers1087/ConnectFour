@@ -96,6 +96,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B66623922DCEBD400F93D8B /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				0B80591422DBAA4300A854CE /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		0B80590222DBAA4200A854CE = {
 			isa = PBXGroup;
 			children = (
@@ -193,7 +201,7 @@
 				0B80590E22DBAA4200A854CE /* AppDelegate.swift */,
 				0B80591022DBAA4200A854CE /* SceneDelegate.swift */,
 				0B80594522DBAA8C00A854CE /* GameConfig.swift */,
-				0B80591422DBAA4300A854CE /* Assets.xcassets */,
+				0B66623922DCEBD400F93D8B /* Assets */,
 			);
 			path = Global;
 			sourceTree = "<group>";
