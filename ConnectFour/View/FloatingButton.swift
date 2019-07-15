@@ -9,17 +9,17 @@
 import SwiftUI
 
 struct FloatingButton: View {
-    
+
     @State private var expand = false
     var tileState: TileState
     var action: () -> Void
-    
+
     var animation: Animation {
         Animation.spring(initialVelocity: 1)
             .speed(1)
             .repeatForever(autoreverses: false)
     }
-    
+
     var body: some View {
         Button(action: {
             self.action()
@@ -35,4 +35,3 @@ struct FloatingButton: View {
         }
     }
 }
-

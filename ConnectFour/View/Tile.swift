@@ -9,11 +9,11 @@
 import SwiftUI
 
 struct Tile: View {
-    
+
     let column: Int
     let row: Int
     var state: TileState
-    
+
     private var color: Color {
         switch state {
         case .playerOne, .playerTwo:
@@ -22,7 +22,7 @@ struct Tile: View {
             return Color.clear
         }
     }
-    
+
     var body: some View {
         ZStack {
             color
@@ -35,7 +35,6 @@ struct Tile: View {
             }
             Circle()
                 .stroke(Color.purple, lineWidth: 10)
-
         }.clipShape(Circle())
     }
 }

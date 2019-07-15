@@ -9,17 +9,17 @@
 import SwiftUI
 
 struct Column: View {
-    
+
     @ObjectBinding var boardViewModel: BoardViewModel
     var tiles: [Tile]
-    
+
     var column: Int {
         guard let c = tiles.first?.column else {
             fatalError("Something went wrong no column for tile")
         }
         return c
     }
-    
+
     var body: some View {
         VStack {
             FloatingButton(tileState: boardViewModel.state.currentTile) {

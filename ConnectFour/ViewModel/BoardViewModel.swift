@@ -10,27 +10,31 @@ import SwiftUI
 import Combine
 
 final class BoardViewModel: BindableObject {
-    
+
     var didChange = PassthroughSubject<BoardViewModel, Never>()
     private var moveCount = 0
+    private var columns: Int
+    private var rows: Int
     var board: Board
-    
+
     var state: GameState = .playerOneTurn {
         didSet {
             moveCount += 1
         }
     }
-    
+
     init(columns: Int, rows: Int) {
-      board = Board(columns: columns, rows: rows)
+        self.columns = columns
+        self.rows = rows
+        board = Board(columns: columns, rows: rows)
     }
-    
+
     func dropTile(inColumn column: Int) {
         if let tile = board.addTile(inColumn: column, forState: state.currentTile) {
             updateState(newTile: tile)
         }
     }
-    
+
     private func updateState(newTile: Tile) {
         let winCheckResult = WinChecker(board: board, winningTile: newTile, moveCount: moveCount).result
         switch winCheckResult {
@@ -45,3 +49,11 @@ final class BoardViewModel: BindableObject {
     }
 }
 
+extension BoardViewModel {
+    func resetGame() {
+        board = Board(columns: columns, rows: rows)
+        state = .playerOneTurn
+        moveCount = 0
+        didChange.send(self)
+    }
+}

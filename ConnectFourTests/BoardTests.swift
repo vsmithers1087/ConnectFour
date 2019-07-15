@@ -10,20 +10,20 @@ import XCTest
 @testable import ConnectFour
 
 class BoardTests: XCTestCase {
-    
+
     var board = Board(columns: 7, rows: 6)
-    
+
     override func setUp() {}
 
     override func tearDown() {}
-    
+
     func testBoard() {
         XCTAssertEqual(board.tileCount, 42)
         XCTAssertNotNil(board.tilesFor(column: 6))
         XCTAssertEqual(board.tilesFor(row: 1).count, 7)
         XCTAssertEqual(board.tilesFor(column: 1).count, 6)
     }
-    
+
     func testHorizontal() {
         (0...6).forEach({board.addTile(inColumn: $0, forState: .playerOne)})
         let bottomRow = board.tilesFor(row: 0)
@@ -31,7 +31,7 @@ class BoardTests: XCTestCase {
             XCTAssertEqual(t.state, .playerOne)
         }
     }
-    
+
     func testVertical() {
         for _ in 0...7 {
             board.addTile(inColumn: 0, forState: .playerTwo)
@@ -41,7 +41,7 @@ class BoardTests: XCTestCase {
             XCTAssertEqual(t.state, .playerTwo)
         }
     }
-    
+
     func testDiagnolAscending() {
         for count in 0...3 {
             for _ in 0...count {
@@ -53,7 +53,7 @@ class BoardTests: XCTestCase {
             XCTAssertEqual(t.state, .playerTwo)
         }
     }
-    
+
     func testDiagnolDescending() {
         var count = 6
         for _ in 0...6 {

@@ -10,11 +10,11 @@ import Foundation
 import SwiftUI
 
 enum TileState {
-    
+
     case playerOne
     case playerTwo
     case vacant
-    
+
     var color: Color {
         switch self {
         case .playerOne:
@@ -25,7 +25,7 @@ enum TileState {
             return config.vacantColor
         }
     }
-    
+
     var image: Image? {
         switch self {
         case .playerOne:
@@ -36,7 +36,7 @@ enum TileState {
             return nil
         }
     }
-    
+
     var debug: String {
         switch self {
         case .playerOne:

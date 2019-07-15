@@ -8,12 +8,12 @@
 
 import Foundation
 
-enum GameState {
-    
+enum GameState: Equatable {
+
     case playerOneTurn
     case playerTwoTurn
     case gameOver(GameResult)
-    
+
     var currentTile: TileState {
         switch self {
         case .playerOneTurn:
@@ -24,7 +24,7 @@ enum GameState {
             return .vacant
         }
     }
-    
+
     func nextTurn() -> GameState {
         switch self {
         case .playerOneTurn:

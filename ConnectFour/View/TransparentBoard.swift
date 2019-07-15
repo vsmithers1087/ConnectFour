@@ -9,16 +9,27 @@
 import SwiftUI
 
 struct TransparentBoard: View {
-    
+
     @ObjectBinding var viewModel: BoardViewModel
-    
+
+    var showAlert: Bool {
+        if viewModel.state == .playerOneTurn ||
+            viewModel.state == .playerTwoTurn {
+            return false
+        }
+        return true
+    }
+
     var body: some View {
         HStack {
-            ForEach(0..<viewModel.board.columnCount) {
-                Column(boardViewModel: self.viewModel, tiles: self.viewModel.board.tilesFor(column: $0))
+            if showAlert {
+                GameOverAlert(viewModel: viewModel)
+            } else {
+                ForEach(0..<viewModel.board.columnCount) {
+                    Column(boardViewModel: self.viewModel, tiles: self.viewModel.board.tilesFor(column: $0))
+                }
             }
-        }
-            .background(Color.clear)
+        }.background(Color.clear)
             .padding()
             .aspectRatio(1, contentMode: .fit)
     }

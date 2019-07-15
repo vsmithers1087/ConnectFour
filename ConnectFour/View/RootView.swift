@@ -8,10 +8,10 @@
 
 import SwiftUI
 
-struct RootView : View {
-    
+struct RootView: View {
+
     @ObjectBinding var boardViewModel: BoardViewModel
-    
+
     var body: some View {
         ZStack() {
             Image("wallpaper").resizable()
@@ -20,5 +20,3 @@ struct RootView : View {
         }
     }
 }
-
-

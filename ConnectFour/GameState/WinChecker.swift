@@ -15,14 +15,14 @@ enum GameResult: Equatable {
 }
 
 struct WinChecker {
-    
+
     let board: Board
     let winningTile: Tile
     let moveCount: Int
     var result: GameResult {
         return checkEndGame()
     }
-    
+
     private func checkEndGame() -> GameResult {
         let horizontals = board.tilesFor(row: winningTile.row)
         let verticals = board.tilesFor(column: winningTile.column)
@@ -36,7 +36,7 @@ struct WinChecker {
         }
         return .inProgress
     }
-    
+
     private func winningTiles(_ tiles: [Tile]) -> Bool {
         guard tiles.count >= 4 else { return false }
         var count = 0

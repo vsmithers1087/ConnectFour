@@ -9,11 +9,11 @@
 import Foundation
 
 struct Board {
-    
+
     enum Diagnol {
         case acending
         case descending
-        
+
         var highSlope: (Int, Int) {
             switch self {
             case .acending:
@@ -22,7 +22,7 @@ struct Board {
                 return (-1, 1)
             }
         }
-        
+
         var lowSlope: (Int, Int) {
             switch self {
             case .acending:
@@ -32,9 +32,9 @@ struct Board {
             }
         }
     }
-    
+
     private(set) var tiles = [[Tile]]()
-    
+
     init(columns: Int, rows: Int) {
         for column in 0..<columns {
             var c = [Tile]()
@@ -44,30 +44,30 @@ struct Board {
             tiles.append(c)
         }
     }
-    
+
     var tileCount: Int {
         return tiles.count * tiles[0].count
     }
-    
+
     var columnCount: Int {
         return tiles.count
     }
-    
+
     func tilesFor(row: Int) -> [Tile] {
         (0..<tiles.count).map({ tiles[$0][row] })
     }
-    
+
     func tilesFor(column: Int) -> [Tile] {
         tiles[column]
     }
-    
+
     func tilesFor(diagnol: Diagnol, column: Int, row: Int) -> [Tile] {
         let tile = tiles[column][row]
         let highTiles = adjacentDiagnols(column: column, row: row, colIncrement: diagnol.highSlope.0, rowIncrement: diagnol.highSlope.1) ?? [Tile]()
         let lowTiles = adjacentDiagnols(column: column, row: row, colIncrement: diagnol.lowSlope.0, rowIncrement: diagnol.lowSlope.1) ?? [Tile]()
         return lowTiles + [tile] + highTiles
     }
-    
+
     @discardableResult
     mutating func addTile(inColumn column: Int, forState state: TileState) -> Tile? {
         if let emptyRow = tilesFor(column: column).filter({ $0.state == .vacant}).first?.row {
@@ -80,7 +80,7 @@ struct Board {
 }
 
 extension Board {
-    private func adjacentDiagnols(column: Int, row: Int,  colIncrement: Int, rowIncrement: Int) -> [Tile]? {
+    private func adjacentDiagnols(column: Int, row: Int, colIncrement: Int, rowIncrement: Int) -> [Tile]? {
         guard
             row + (rowIncrement * 3) >= 0,
             row + (rowIncrement * 3) < tiles[0].count,
