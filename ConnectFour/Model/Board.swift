@@ -9,11 +9,13 @@
 import Foundation
 
 struct Board {
-
+    
+    /// Sub-type for adjascent tile direction
     enum Diagnol {
         case acending
         case descending
-
+        
+        /// upper half of the diagnol slope.
         var highSlope: (Int, Int) {
             switch self {
             case .acending:
@@ -22,7 +24,8 @@ struct Board {
                 return (-1, 1)
             }
         }
-
+        
+        /// lower half of the diagnol slope
         var lowSlope: (Int, Int) {
             switch self {
             case .acending:
@@ -32,7 +35,8 @@ struct Board {
             }
         }
     }
-
+    
+    /// 2D array for Tile coordinates
     private(set) var tiles = [[Tile]]()
 
     init(columns: Int, rows: Int) {
@@ -44,7 +48,9 @@ struct Board {
             tiles.append(c)
         }
     }
-
+    
+//MARK: - Get Tiles
+    
     var tileCount: Int {
         return tiles.count * tiles[0].count
     }
@@ -60,7 +66,11 @@ struct Board {
     func tilesFor(column: Int) -> [Tile] {
         tiles[column]
     }
-
+    
+    /// Return six adjacent tiles relative to the selected tile on diagnol slope. [[lowTiles], tiles, [highTiles]]
+    /// - Parameter diagnol: The slope of the diagnol
+    /// - Parameter column: The column index for selected tile
+    /// - Parameter row: The row index for selected tile
     func tilesFor(diagnol: Diagnol, column: Int, row: Int) -> [Tile] {
         let tile = tiles[column][row]
         let highTiles = adjacentDiagnols(column: column, row: row, colIncrement: diagnol.highSlope.0, rowIncrement: diagnol.highSlope.1) ?? [Tile]()
@@ -68,6 +78,11 @@ struct Board {
         return lowTiles + [tile] + highTiles
     }
 
+//MARK: - Set Tiles
+    
+    /// Add a tile to the board for column index. Will optionally return the new tile if the column is not full
+    /// - Parameter column: The column index for dropped tile
+    /// - Parameter state: The state of the new tile
     @discardableResult
     mutating func addTile(inColumn column: Int, forState state: TileState) -> Tile? {
         if let emptyRow = tilesFor(column: column).filter({ $0.state == .vacant}).first?.row {
@@ -80,6 +95,11 @@ struct Board {
 }
 
 extension Board {
+    /// Optionally returns three successive tiles from any coordinate in any slope direction. If adjacent coordinate is out of bounds nil is returned
+    /// - Parameter column: The column index for the tile
+    /// - Parameter row: The row index for the tile
+    /// - Parameter colIncrement: The y slope of the diagnol
+    /// - Parameter rowIncrement: The x slope of the diagnol
     private func adjacentDiagnols(column: Int, row: Int, colIncrement: Int, rowIncrement: Int) -> [Tile]? {
         guard
             row + (rowIncrement * 3) >= 0,
@@ -97,12 +117,4 @@ extension Board {
     }
 }
 
-extension Board {
-    func log() {
-        var column = 5
-        for _ in 0...column {
-            print("\(tiles[0][column].state.debug)\(tiles[1][column].state.debug)\(tiles[2][column].state.debug)\(tiles[3][column].state.debug)\(tiles[4][column].state.debug)\(tiles[5][column].state.debug)\(tiles[6][column].state.debug)")
-            column -= 1
-        }
-    }
-}
+
