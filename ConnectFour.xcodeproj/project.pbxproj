@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B36832C22DE029E006841F0 /* GameResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B36832B22DE029E006841F0 /* GameResult.swift */; };
 		0B66623D22DCF6AD00F93D8B /* GameOverAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B66623C22DCF6AD00F93D8B /* GameOverAlert.swift */; };
 		0B6D50DF22DCC41F002DB955 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B6D50DE22DCC41F002DB955 /* LaunchScreen.storyboard */; };
 		0B6D50E122DCC491002DB955 /* BoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6D50E022DCC491002DB955 /* BoardTests.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B36832B22DE029E006841F0 /* GameResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResult.swift; sourceTree = "<group>"; };
 		0B66623C22DCF6AD00F93D8B /* GameOverAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverAlert.swift; sourceTree = "<group>"; };
 		0B6D50DE22DCC41F002DB955 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B6D50E022DCC491002DB955 /* BoardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardTests.swift; sourceTree = "<group>"; };
@@ -151,9 +153,9 @@
 			children = (
 				0B80594022DBAA8B00A854CE /* RootView.swift */,
 				0B80594122DBAA8B00A854CE /* TransparentBoard.swift */,
+				0B80594422DBAA8C00A854CE /* FloatingButton.swift */,
 				0B80595322DBAAB500A854CE /* Column.swift */,
 				0B80594222DBAA8B00A854CE /* Tile.swift */,
-				0B80594422DBAA8C00A854CE /* FloatingButton.swift */,
 				0B66623C22DCF6AD00F93D8B /* GameOverAlert.swift */,
 			);
 			path = View;
@@ -164,6 +166,7 @@
 			children = (
 				0B80594622DBAA8C00A854CE /* TileState.swift */,
 				0B80594322DBAA8C00A854CE /* GameState.swift */,
+				0B36832B22DE029E006841F0 /* GameResult.swift */,
 				0B80593E22DBAA8B00A854CE /* WinChecker.swift */,
 			);
 			path = GameState;
@@ -294,6 +297,7 @@
 				0B80594C22DBAA8C00A854CE /* GameState.swift in Sources */,
 				0B80594D22DBAA8C00A854CE /* FloatingButton.swift in Sources */,
 				0B80595522DBAAB600A854CE /* BoardViewModel.swift in Sources */,
+				0B36832C22DE029E006841F0 /* GameResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

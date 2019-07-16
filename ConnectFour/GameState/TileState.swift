@@ -36,15 +36,4 @@ enum TileState {
             return nil
         }
     }
-
-    var debug: String {
-        switch self {
-        case .playerOne:
-            return "[A]"
-        case .playerTwo:
-            return "[B]"
-        case .vacant:
-            return "[0]"
-        }
-    }
 }

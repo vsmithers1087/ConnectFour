@@ -8,12 +8,7 @@
 
 import Foundation
 
-enum GameResult: Equatable {
-    case win(TileState)
-    case draw
-    case inProgress
-}
-
+/// A Type that checks whether the game is concluded for the `winningTile`, `board`,  and `moveCount` once a new move has been made
 struct WinChecker {
 
     let board: Board
@@ -22,7 +17,8 @@ struct WinChecker {
     var result: GameResult {
         return checkEndGame()
     }
-
+    
+    /// Checks for all possible horizontal, vertical and diagnol wins. Returns `.inProgress` if win or draw are not reached
     private func checkEndGame() -> GameResult {
         let horizontals = board.tilesFor(row: winningTile.row)
         let verticals = board.tilesFor(column: winningTile.column)
@@ -36,7 +32,9 @@ struct WinChecker {
         }
         return .inProgress
     }
-
+    
+    /// Checks for four consecutive tiles matching `winningTile`
+    /// - Parameter tiles: The possible winning tiles
     private func winningTiles(_ tiles: [Tile]) -> Bool {
         guard tiles.count >= 4 else { return false }
         var count = 0
