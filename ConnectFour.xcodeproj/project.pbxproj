@@ -14,7 +14,6 @@
 		0B80590F22DBAA4200A854CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B80590E22DBAA4200A854CE /* AppDelegate.swift */; };
 		0B80591122DBAA4200A854CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B80591022DBAA4200A854CE /* SceneDelegate.swift */; };
 		0B80591522DBAA4300A854CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B80591422DBAA4300A854CE /* Assets.xcassets */; };
-		0B80593122DBAA4300A854CE /* ConnectFourUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B80593022DBAA4300A854CE /* ConnectFourUITests.swift */; };
 		0B80594722DBAA8C00A854CE /* WinChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B80593E22DBAA8B00A854CE /* WinChecker.swift */; };
 		0B80594922DBAA8C00A854CE /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B80594022DBAA8B00A854CE /* RootView.swift */; };
 		0B80594A22DBAA8C00A854CE /* TransparentBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B80594122DBAA8B00A854CE /* TransparentBoard.swift */; };
@@ -36,13 +35,6 @@
 			remoteGlobalIDString = 0B80590A22DBAA4200A854CE;
 			remoteInfo = ConnectFour;
 		};
-		0B80592D22DBAA4300A854CE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0B80590322DBAA4200A854CE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0B80590A22DBAA4200A854CE;
-			remoteInfo = ConnectFour;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -57,9 +49,6 @@
 		0B80591C22DBAA4300A854CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B80592122DBAA4300A854CE /* ConnectFourTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConnectFourTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B80592722DBAA4300A854CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0B80592C22DBAA4300A854CE /* ConnectFourUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConnectFourUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0B80593022DBAA4300A854CE /* ConnectFourUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectFourUITests.swift; sourceTree = "<group>"; };
-		0B80593222DBAA4300A854CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B80593E22DBAA8B00A854CE /* WinChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinChecker.swift; sourceTree = "<group>"; };
 		0B80594022DBAA8B00A854CE /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		0B80594122DBAA8B00A854CE /* TransparentBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransparentBoard.swift; sourceTree = "<group>"; };
@@ -88,13 +77,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0B80592922DBAA4300A854CE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -111,7 +93,6 @@
 			children = (
 				0B80590D22DBAA4200A854CE /* ConnectFour */,
 				0B80592422DBAA4300A854CE /* ConnectFourTests */,
-				0B80592F22DBAA4300A854CE /* ConnectFourUITests */,
 				0B80590C22DBAA4200A854CE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -121,7 +102,6 @@
 			children = (
 				0B80590B22DBAA4200A854CE /* ConnectFour.app */,
 				0B80592122DBAA4300A854CE /* ConnectFourTests.xctest */,
-				0B80592C22DBAA4300A854CE /* ConnectFourUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -148,15 +128,6 @@
 				0B80592722DBAA4300A854CE /* Info.plist */,
 			);
 			path = ConnectFourTests;
-			sourceTree = "<group>";
-		};
-		0B80592F22DBAA4300A854CE /* ConnectFourUITests */ = {
-			isa = PBXGroup;
-			children = (
-				0B80593022DBAA4300A854CE /* ConnectFourUITests.swift */,
-				0B80593222DBAA4300A854CE /* Info.plist */,
-			);
-			path = ConnectFourUITests;
 			sourceTree = "<group>";
 		};
 		0B80595822DBAB4B00A854CE /* Model */ = {
@@ -247,24 +218,6 @@
 			productReference = 0B80592122DBAA4300A854CE /* ConnectFourTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0B80592B22DBAA4300A854CE /* ConnectFourUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0B80593B22DBAA4300A854CE /* Build configuration list for PBXNativeTarget "ConnectFourUITests" */;
-			buildPhases = (
-				0B80592822DBAA4300A854CE /* Sources */,
-				0B80592922DBAA4300A854CE /* Frameworks */,
-				0B80592A22DBAA4300A854CE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0B80592E22DBAA4300A854CE /* PBXTargetDependency */,
-			);
-			name = ConnectFourUITests;
-			productName = ConnectFourUITests;
-			productReference = 0B80592C22DBAA4300A854CE /* ConnectFourUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -279,10 +232,6 @@
 						CreatedOnToolsVersion = 11.0;
 					};
 					0B80592022DBAA4300A854CE = {
-						CreatedOnToolsVersion = 11.0;
-						TestTargetID = 0B80590A22DBAA4200A854CE;
-					};
-					0B80592B22DBAA4300A854CE = {
 						CreatedOnToolsVersion = 11.0;
 						TestTargetID = 0B80590A22DBAA4200A854CE;
 					};
@@ -303,7 +252,6 @@
 			targets = (
 				0B80590A22DBAA4200A854CE /* ConnectFour */,
 				0B80592022DBAA4300A854CE /* ConnectFourTests */,
-				0B80592B22DBAA4300A854CE /* ConnectFourUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -319,13 +267,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0B80591F22DBAA4300A854CE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0B80592A22DBAA4300A854CE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -365,14 +306,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0B80592822DBAA4300A854CE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0B80593122DBAA4300A854CE /* ConnectFourUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -380,11 +313,6 @@
 			isa = PBXTargetDependency;
 			target = 0B80590A22DBAA4200A854CE /* ConnectFour */;
 			targetProxy = 0B80592222DBAA4300A854CE /* PBXContainerItemProxy */;
-		};
-		0B80592E22DBAA4300A854CE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0B80590A22DBAA4200A854CE /* ConnectFour */;
-			targetProxy = 0B80592D22DBAA4300A854CE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -579,44 +507,6 @@
 			};
 			name = Release;
 		};
-		0B80593C22DBAA4300A854CE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ConnectFourUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = ves.ConnectFourUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ConnectFour;
-			};
-			name = Debug;
-		};
-		0B80593D22DBAA4300A854CE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ConnectFourUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = ves.ConnectFourUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ConnectFour;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -643,15 +533,6 @@
 			buildConfigurations = (
 				0B80593922DBAA4300A854CE /* Debug */,
 				0B80593A22DBAA4300A854CE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0B80593B22DBAA4300A854CE /* Build configuration list for PBXNativeTarget "ConnectFourUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0B80593C22DBAA4300A854CE /* Debug */,
-				0B80593D22DBAA4300A854CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
