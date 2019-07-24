@@ -11,7 +11,7 @@ import Combine
 
 final class BoardViewModel: BindableObject {
 
-    var didChange = PassthroughSubject<BoardViewModel, Never>()
+    var willChange = PassthroughSubject<BoardViewModel, Never>()
     private var moveCount = 0
     private var columns: Int
     private var rows: Int
@@ -45,7 +45,7 @@ final class BoardViewModel: BindableObject {
         case .inProgress:
             state = state.nextTurn()
         }
-        didChange.send(self)
+        willChange.send(self)
     }
 }
 
@@ -54,6 +54,6 @@ extension BoardViewModel {
         board = Board(columns: columns, rows: rows)
         state = .playerOneTurn
         moveCount = 0
-        didChange.send(self)
+        willChange.send(self)
     }
 }
