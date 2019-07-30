@@ -18,7 +18,7 @@
 		0B80594722DBAA8C00A854CE /* WinChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B80593E22DBAA8B00A854CE /* WinChecker.swift */; };
 		0B80594922DBAA8C00A854CE /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B80594022DBAA8B00A854CE /* RootView.swift */; };
 		0B80594A22DBAA8C00A854CE /* TransparentBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B80594122DBAA8B00A854CE /* TransparentBoard.swift */; };
-		0B80594B22DBAA8C00A854CE /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B80594222DBAA8B00A854CE /* Tile.swift */; };
+		0B80594B22DBAA8C00A854CE /* RoundTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B80594222DBAA8B00A854CE /* RoundTile.swift */; };
 		0B80594C22DBAA8C00A854CE /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B80594322DBAA8C00A854CE /* GameState.swift */; };
 		0B80594D22DBAA8C00A854CE /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B80594422DBAA8C00A854CE /* FloatingButton.swift */; };
 		0B80594E22DBAA8C00A854CE /* GameConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B80594522DBAA8C00A854CE /* GameConfig.swift */; };
@@ -26,6 +26,7 @@
 		0B80595522DBAAB600A854CE /* BoardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B80595122DBAAB500A854CE /* BoardViewModel.swift */; };
 		0B80595622DBAAB600A854CE /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B80595222DBAAB500A854CE /* Board.swift */; };
 		0B80595722DBAAB600A854CE /* Column.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B80595322DBAAB500A854CE /* Column.swift */; };
+		0BFD9AD222F08616002DED79 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFD9AD122F08616002DED79 /* Tile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +55,7 @@
 		0B80593E22DBAA8B00A854CE /* WinChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinChecker.swift; sourceTree = "<group>"; };
 		0B80594022DBAA8B00A854CE /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		0B80594122DBAA8B00A854CE /* TransparentBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransparentBoard.swift; sourceTree = "<group>"; };
-		0B80594222DBAA8B00A854CE /* Tile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
+		0B80594222DBAA8B00A854CE /* RoundTile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundTile.swift; sourceTree = "<group>"; };
 		0B80594322DBAA8C00A854CE /* GameState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		0B80594422DBAA8C00A854CE /* FloatingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
 		0B80594522DBAA8C00A854CE /* GameConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameConfig.swift; sourceTree = "<group>"; };
@@ -62,6 +63,7 @@
 		0B80595122DBAAB500A854CE /* BoardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardViewModel.swift; sourceTree = "<group>"; };
 		0B80595222DBAAB500A854CE /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		0B80595322DBAAB500A854CE /* Column.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Column.swift; sourceTree = "<group>"; };
+		0BFD9AD122F08616002DED79 /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				0B80595222DBAAB500A854CE /* Board.swift */,
+				0BFD9AD122F08616002DED79 /* Tile.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -155,7 +158,7 @@
 				0B80594122DBAA8B00A854CE /* TransparentBoard.swift */,
 				0B80594422DBAA8C00A854CE /* FloatingButton.swift */,
 				0B80595322DBAAB500A854CE /* Column.swift */,
-				0B80594222DBAA8B00A854CE /* Tile.swift */,
+				0B80594222DBAA8B00A854CE /* RoundTile.swift */,
 				0B66623C22DCF6AD00F93D8B /* GameOverAlert.swift */,
 			);
 			path = View;
@@ -286,12 +289,13 @@
 				0B66623D22DCF6AD00F93D8B /* GameOverAlert.swift in Sources */,
 				0B80590F22DBAA4200A854CE /* AppDelegate.swift in Sources */,
 				0B80594F22DBAA8C00A854CE /* TileState.swift in Sources */,
+				0BFD9AD222F08616002DED79 /* Tile.swift in Sources */,
 				0B80595622DBAAB600A854CE /* Board.swift in Sources */,
 				0B80594E22DBAA8C00A854CE /* GameConfig.swift in Sources */,
 				0B80591122DBAA4200A854CE /* SceneDelegate.swift in Sources */,
 				0B80595722DBAAB600A854CE /* Column.swift in Sources */,
 				0B80594922DBAA8C00A854CE /* RootView.swift in Sources */,
-				0B80594B22DBAA8C00A854CE /* Tile.swift in Sources */,
+				0B80594B22DBAA8C00A854CE /* RoundTile.swift in Sources */,
 				0B80594722DBAA8C00A854CE /* WinChecker.swift in Sources */,
 				0B80594A22DBAA8C00A854CE /* TransparentBoard.swift in Sources */,
 				0B80594C22DBAA8C00A854CE /* GameState.swift in Sources */,

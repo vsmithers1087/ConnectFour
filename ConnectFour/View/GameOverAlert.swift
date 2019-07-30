@@ -20,11 +20,12 @@ struct GameOverAlert: View {
             Button(action: {
                 self.viewModel.resetGame()
             }) {
-                Text("Reset Game").padding()
+                Text("Reset Game")
+                    .padding()
+                    .cornerRadius(8.0)
                     .foregroundColor(Color.white)
                     .font(.largeTitle)
                     .border(Color.blue, width: 2.0)
-                    .clipShape(Circle())
             }.offset(x: 0, y: 50)
         }
     }

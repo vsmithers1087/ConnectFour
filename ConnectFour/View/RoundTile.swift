@@ -8,14 +8,12 @@
 
 import SwiftUI
 
-struct Tile: View {
+struct RoundTile: View {
 
-    let column: Int
-    let row: Int
-    var state: TileState
+    let model: Tile
 
     private var color: Color {
-        switch state {
+        switch model.state {
         case .playerOne, .playerTwo:
             return Color.black
         default:
@@ -28,10 +26,10 @@ struct Tile: View {
             color
                 .blur(radius: 5, opaque: false)
             Circle()
-                .fill(state.color.opacity(0.9))
+                .fill(model.state.color.opacity(0.9))
                 .shadow(color: Color.purple, radius: 10)
-            if state.image != nil {
-                state.image.blendMode(.screen)
+            if model.state.image != nil {
+                model.state.image.blendMode(.screen)
             }
             Circle()
                 .stroke(Color.purple, lineWidth: 10)

@@ -25,8 +25,8 @@ struct Column: View {
             FloatingButton(tileState: boardViewModel.state.currentTile) {
                 self.boardViewModel.dropTile(inColumn: self.column)
             }.padding(EdgeInsets(top: 0, leading: 0, bottom: 50, trailing: 0))
-            ForEach((0...5).reversed()) {
-                self.tiles[$0]
+            ForEach(tiles) {
+                RoundTile(model: $0)
             }
         }.background(Color.clear)
     }
