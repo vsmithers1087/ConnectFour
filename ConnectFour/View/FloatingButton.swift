@@ -15,7 +15,7 @@ struct FloatingButton: View {
     var action: () -> Void
 
     var animation: Animation {
-        Animation.spring(initialVelocity: 1)
+        Animation.spring(response: 1)
             .speed(1)
             .repeatForever(autoreverses: false)
     }

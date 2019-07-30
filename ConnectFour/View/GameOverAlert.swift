@@ -23,7 +23,8 @@ struct GameOverAlert: View {
                 Text("Reset Game").padding()
                     .foregroundColor(Color.white)
                     .font(.largeTitle)
-                    .border(Color.blue, width: 2.0, cornerRadius: 8)
+                    .border(Color.blue, width: 2.0)
+                    .clipShape(Circle())
             }.offset(x: 0, y: 50)
         }
     }
