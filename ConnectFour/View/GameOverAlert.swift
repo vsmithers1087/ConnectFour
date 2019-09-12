@@ -10,7 +10,7 @@ import SwiftUI
 
 struct GameOverAlert: View {
 
-    @ObjectBinding var viewModel: BoardViewModel
+    @Binding var viewModel: BoardViewModel
 
     var body: some View {
         VStack {

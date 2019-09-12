@@ -10,13 +10,13 @@ import SwiftUI
 
 struct RootView: View {
 
-    @ObjectBinding var boardViewModel: BoardViewModel
+    @Binding var boardViewModel: BoardViewModel
 
     var body: some View {
         ZStack() {
             Image("wallpaper").resizable()
             .shadow(color: Color.purple, radius: 50)
-            TransparentBoard(viewModel: boardViewModel).blendMode(.exclusion)
+            TransparentBoard(viewModel: $boardViewModel).blendMode(.exclusion)
         }
     }
 }

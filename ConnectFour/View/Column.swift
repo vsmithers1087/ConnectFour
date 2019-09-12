@@ -10,7 +10,7 @@ import SwiftUI
 
 struct Column: View {
 
-    @ObjectBinding var boardViewModel: BoardViewModel
+    @Binding var boardViewModel: BoardViewModel
     var tiles: [Tile]
 
     var column: Int {

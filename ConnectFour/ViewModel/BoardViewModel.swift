@@ -9,7 +9,7 @@
 import SwiftUI
 import Combine
 
-final class BoardViewModel: BindableObject {
+final class BoardViewModel: ObservableObject {
 
     var willChange = PassthroughSubject<BoardViewModel, Never>()
     private var moveCount = 0

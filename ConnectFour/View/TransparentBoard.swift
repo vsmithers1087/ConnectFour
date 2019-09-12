@@ -10,7 +10,7 @@ import SwiftUI
 
 struct TransparentBoard: View {
 
-    @ObjectBinding var viewModel: BoardViewModel
+    @Binding var viewModel: BoardViewModel
 
     var showAlert: Bool {
         if viewModel.state == .playerOneTurn ||
@@ -23,10 +23,10 @@ struct TransparentBoard: View {
     var body: some View {
         HStack {
             if showAlert {
-                GameOverAlert(viewModel: viewModel)
+                GameOverAlert(viewModel: $viewModel)
             } else {
                 ForEach(0..<viewModel.board.columnCount) {
-                    Column(boardViewModel: self.viewModel, tiles: self.viewModel.board.tilesFor(column: $0).reversed())
+                    Column(boardViewModel: self.$viewModel, tiles: self.viewModel.board.tilesFor(column: $0).reversed())
                 }
             }
         }.background(Color.clear)
