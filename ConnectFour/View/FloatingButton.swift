@@ -11,7 +11,7 @@ import SwiftUI
 struct FloatingButton: View {
 
     @State private var expand = false
-    var tileState: TileState
+    var color: Color
     var action: () -> Void
 
     var animation: Animation {
@@ -25,7 +25,7 @@ struct FloatingButton: View {
             self.action()
         }) {
             Image(systemName: "play.circle")
-                .foregroundColor(tileState.color)
+                .foregroundColor(color)
             }
             .shadow(color: Color.purple, radius: 1, x: 1, y: 1)
             .rotationEffect(Angle(degrees: 90))

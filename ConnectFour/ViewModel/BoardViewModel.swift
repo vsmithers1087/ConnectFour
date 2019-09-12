@@ -11,11 +11,8 @@ import Combine
 
 final class BoardViewModel: ObservableObject {
 
-    var willChange = PassthroughSubject<BoardViewModel, Never>()
     private var moveCount = 0
-    private var columns: Int
-    private var rows: Int
-    var board: Board
+    @Published var board: Board
 
     var state: GameState = .playerOneTurn {
         didSet {
@@ -23,10 +20,8 @@ final class BoardViewModel: ObservableObject {
         }
     }
 
-    init(columns: Int, rows: Int) {
-        self.columns = columns
-        self.rows = rows
-        board = Board(columns: columns, rows: rows)
+    init(board: Board) {
+        self.board = board
     }
 
     func dropTile(inColumn column: Int) {
@@ -45,15 +40,13 @@ final class BoardViewModel: ObservableObject {
         case .inProgress:
             state = state.nextTurn()
         }
-        willChange.send(self)
     }
 }
 
 extension BoardViewModel {
     func resetGame() {
-        board = Board(columns: columns, rows: rows)
+        board = Board(columns: config.columns, rows: config.rows)
         state = .playerOneTurn
         moveCount = 0
-        willChange.send(self)
     }
 }

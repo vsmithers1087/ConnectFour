@@ -10,7 +10,7 @@ import SwiftUI
 
 struct Column: View {
 
-    @Binding var boardViewModel: BoardViewModel
+    @EnvironmentObject var boardViewModel: BoardViewModel
     var tiles: [Tile]
 
     var column: Int {
@@ -22,9 +22,10 @@ struct Column: View {
 
     var body: some View {
         VStack {
-            FloatingButton(tileState: boardViewModel.state.currentTile) {
+            FloatingButton(color: boardViewModel.state.currentTile.color) {
                 self.boardViewModel.dropTile(inColumn: self.column)
-            }.padding(EdgeInsets(top: 0, leading: 0, bottom: 50, trailing: 0))
+            }
+            .padding(EdgeInsets(top: 0, leading: 0, bottom: 50, trailing: 0))
             ForEach(tiles) {
                 RoundTile(model: $0)
             }
