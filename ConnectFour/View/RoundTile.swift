@@ -12,27 +12,15 @@ struct RoundTile: View {
 
     let model: Tile
 
-    private var color: Color {
-        switch model.state {
-        case .playerOne, .playerTwo:
-            return Color.black
-        default:
-            return Color.clear
-        }
-    }
-
     var body: some View {
         ZStack {
-            color
-                .blur(radius: 5, opaque: false)
             Circle()
-                .fill(model.state.color.opacity(0.9))
-                .shadow(color: Color.purple, radius: 10)
+                .fill(model.state.color)
+            Circle()
+                .stroke(Color.purple, lineWidth: 5)
             if model.state.image != nil {
-                model.state.image.blendMode(.screen)
+                model.state.image
             }
-            Circle()
-                .stroke(Color.purple, lineWidth: 10)
-        }.clipShape(Circle())
+        }
     }
 }
