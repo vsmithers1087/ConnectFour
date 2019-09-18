@@ -12,13 +12,7 @@ struct Column: View {
 
     @EnvironmentObject var boardViewModel: BoardViewModel
     var tiles: [Tile]
-
-    var column: Int {
-        guard let c = tiles.first?.column else {
-            fatalError("Something went wrong no column for tile")
-        }
-        return c
-    }
+    var column: Int 
 
     var body: some View {
         VStack {

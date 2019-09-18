@@ -26,7 +26,8 @@ struct TransparentBoard: View {
                 GameOverAlert().environmentObject(viewModel)
             } else {
                 ForEach(0..<viewModel.board.columnCount) {
-                    Column(tiles: self.viewModel.board.tilesFor(column: $0).reversed()).environmentObject(self.viewModel)
+                    Column(tiles: self.viewModel.board.tilesFor(column: $0).reversed(),
+                           column: $0).environmentObject(self.viewModel)
                 }
             }
         }.background(Color.clear)

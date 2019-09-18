@@ -16,7 +16,7 @@ struct RootView: View {
         ZStack() {
             Image("wallpaper").resizable()
             .shadow(color: Color.purple, radius: 50)
-            TransparentBoard().environmentObject(boardViewModel).blendMode(.exclusion)
+            TransparentBoard().environmentObject(boardViewModel)
         }
     }
 }

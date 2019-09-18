@@ -15,12 +15,10 @@ struct RoundTile: View {
     var body: some View {
         ZStack {
             Circle()
-                .fill(model.state.color)
+                .fill(model.state.color).blendMode(.hue)
             Circle()
                 .stroke(Color.purple, lineWidth: 5)
-            if model.state.image != nil {
-                model.state.image
-            }
+            model.state.image?.foregroundColor(Color.white)
         }
     }
 }
