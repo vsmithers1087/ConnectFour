@@ -11,8 +11,8 @@ import SwiftUI
 struct Column: View {
 
     @EnvironmentObject var boardViewModel: BoardViewModel
-    var tiles: [Tile]
-    var column: Int 
+    let tiles: [Tile]
+    let column: Int
 
     var body: some View {
         VStack {

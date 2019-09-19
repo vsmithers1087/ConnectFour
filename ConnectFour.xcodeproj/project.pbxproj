@@ -63,6 +63,7 @@
 		0B80595122DBAAB500A854CE /* BoardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardViewModel.swift; sourceTree = "<group>"; };
 		0B80595222DBAAB500A854CE /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		0B80595322DBAAB500A854CE /* Column.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Column.swift; sourceTree = "<group>"; };
+		0B9B4BFF2332610800B09D13 /* ConnectFourTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = ConnectFourTests.xctestplan; sourceTree = "<group>"; };
 		0BFD9AD122F08616002DED79 /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +131,7 @@
 				0B6D50E022DCC491002DB955 /* BoardTests.swift */,
 				0B6D50E222DCC6D4002DB955 /* WinCheckerTests.swift */,
 				0B80592722DBAA4300A854CE /* Info.plist */,
+				0B9B4BFF2332610800B09D13 /* ConnectFourTests.xctestplan */,
 			);
 			path = ConnectFourTests;
 			sourceTree = "<group>";
