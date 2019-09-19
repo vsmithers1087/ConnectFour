@@ -18,7 +18,7 @@ struct RoundTile: View {
                 .fill(model.state.color).blendMode(.hue)
             Circle()
                 .stroke(Color.purple, lineWidth: 5)
-            model.state.image?.foregroundColor(Color.white)
+            model.state.image.foregroundColor(Color.white)
         }
     }
 }

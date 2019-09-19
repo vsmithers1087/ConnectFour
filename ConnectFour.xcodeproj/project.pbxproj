@@ -26,7 +26,6 @@
 		0B80595522DBAAB600A854CE /* BoardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B80595122DBAAB500A854CE /* BoardViewModel.swift */; };
 		0B80595622DBAAB600A854CE /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B80595222DBAAB500A854CE /* Board.swift */; };
 		0B80595722DBAAB600A854CE /* Column.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B80595322DBAAB500A854CE /* Column.swift */; };
-		0BFA686C2333941A006B591F /* DroppedFloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFA686B2333941A006B591F /* DroppedFloatingButton.swift */; };
 		0BFD9AD222F08616002DED79 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFD9AD122F08616002DED79 /* Tile.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,7 +64,6 @@
 		0B80595222DBAAB500A854CE /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		0B80595322DBAAB500A854CE /* Column.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Column.swift; sourceTree = "<group>"; };
 		0B9B4BFF2332610800B09D13 /* ConnectFourTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = ConnectFourTests.xctestplan; sourceTree = "<group>"; };
-		0BFA686B2333941A006B591F /* DroppedFloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroppedFloatingButton.swift; sourceTree = "<group>"; };
 		0BFD9AD122F08616002DED79 /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -161,7 +159,6 @@
 				0B80594022DBAA8B00A854CE /* RootView.swift */,
 				0B80594122DBAA8B00A854CE /* TransparentBoard.swift */,
 				0B80594422DBAA8C00A854CE /* FloatingButton.swift */,
-				0BFA686B2333941A006B591F /* DroppedFloatingButton.swift */,
 				0B80595322DBAAB500A854CE /* Column.swift */,
 				0B80594222DBAA8B00A854CE /* RoundTile.swift */,
 				0B66623C22DCF6AD00F93D8B /* GameOverAlert.swift */,
@@ -304,7 +301,6 @@
 				0B80594722DBAA8C00A854CE /* WinChecker.swift in Sources */,
 				0B80594A22DBAA8C00A854CE /* TransparentBoard.swift in Sources */,
 				0B80594C22DBAA8C00A854CE /* GameState.swift in Sources */,
-				0BFA686C2333941A006B591F /* DroppedFloatingButton.swift in Sources */,
 				0B80594D22DBAA8C00A854CE /* FloatingButton.swift in Sources */,
 				0B80595522DBAAB600A854CE /* BoardViewModel.swift in Sources */,
 				0B36832C22DE029E006841F0 /* GameResult.swift in Sources */,

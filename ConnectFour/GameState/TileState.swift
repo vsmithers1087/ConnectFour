@@ -26,14 +26,14 @@ enum TileState {
         }
     }
 
-    var image: Image? {
+    var image: Image {
         switch self {
         case .playerOne:
             return Image(systemName: "tortoise")
         case .playerTwo:
             return Image(systemName: "hare")
         case .vacant:
-            return nil
+            return Image(uiImage: UIImage())
         }
     }
 }
