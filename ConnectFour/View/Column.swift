@@ -17,7 +17,9 @@ struct Column: View {
     var body: some View {
         VStack {
             FloatingButton(color: boardViewModel.state.currentTile.color) {
-                self.boardViewModel.dropTile(inColumn: self.column)
+                withAnimation(.easeIn(duration: 0.5)) {
+                    self.boardViewModel.dropTile(inColumn: self.column)
+                }
             }
             .padding(EdgeInsets(top: 0, leading: 0, bottom: 50, trailing: 0))
             ForEach(tiles) {

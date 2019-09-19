@@ -19,10 +19,17 @@ struct FloatingButton: View {
             .speed(1)
             .repeatForever(autoreverses: false)
     }
+    
+    var dropAnimation: Animation {
+        Animation.spring(response: 0.1)
+            .speed(1)
+    }
 
     var body: some View {
         Button(action: {
-            self.action()
+            withAnimation(self.dropAnimation) {
+                self.action()
+            }
         }) {
             Image(systemName: "play.circle")
                 .foregroundColor(color)
