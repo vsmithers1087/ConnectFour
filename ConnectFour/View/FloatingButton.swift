@@ -12,9 +12,8 @@ struct FloatingButton: View {
 
     @State private var expand = false
     @State private var dropping = false
-    var color: Color
-    var image: Image
-    var action: () -> Void
+    let tileState: TileState
+    let action: () -> Void
 
     private var animation: Animation {
         Animation
@@ -41,17 +40,16 @@ struct FloatingButton: View {
                 self.dropping = true
             }
             withAnimation(self.actionAnimation) {
-                self.dropping = false
                 self.action()
+                self.dropping = false
             }
         }) {
-             image.foregroundColor(color)
+            RoundTile(state: tileState)
         }
-        .offset(x: 0, y: dropping ? 100 : 0)
-            .shadow(color: Color.purple, radius: 1, x: 1, y: 1)
-            .scaleEffect(expand ? 2.5: 3.5)
-            .animation(animation).onAppear {
-                self.expand.toggle()
+        .offset(x: 0, y: dropping ? 200 : 0)
+        .scaleEffect(expand ? 0.85 : 1.1)
+        .animation(animation).onAppear {
+            self.expand.toggle()
         }
     }
     

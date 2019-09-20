@@ -10,15 +10,15 @@ import SwiftUI
 
 struct RoundTile: View {
 
-    let model: Tile
+    let state: TileState
 
     var body: some View {
         ZStack {
             Circle()
-                .fill(model.state.color).blendMode(.hue)
+                .fill(state.color).blendMode(.hue)
             Circle()
                 .stroke(Color.purple, lineWidth: 5)
-            model.state.image.foregroundColor(Color.white)
+            state.image.foregroundColor(Color.white)
         }
     }
 }

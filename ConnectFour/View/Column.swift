@@ -17,13 +17,11 @@ struct Column: View {
 
     var body: some View {
         VStack {
-            FloatingButton(color: boardViewModel.state.currentTile.color,
-                           image: boardViewModel.state.currentTile.image) {
+            FloatingButton(tileState: tileState) {
                 self.boardViewModel.dropTile(inColumn: self.column)
             }
-            .padding(EdgeInsets(top: 0, leading: 0, bottom: 50, trailing: 0))
             ForEach(tiles) {
-                RoundTile(model: $0)
+                RoundTile(state: $0.state)
             }
         }.background(Color.clear)
     }
