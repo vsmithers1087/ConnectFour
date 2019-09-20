@@ -13,6 +13,7 @@ struct PulsingButton: View {
     @State private var expand = false
     @State private var dropping = false
     let tileState: TileState
+    let distanceToDrop: CGFloat
     let action: () -> Void
     private let animations = PulsingButtonAnimations()
 
@@ -32,12 +33,10 @@ struct PulsingButton: View {
         }) {
             RoundTile(state: tileState)
         }
-        .offset(x: 0, y: dropping ? 300 : 0)
+        .offset(x: 0, y: dropping ? distanceToDrop : 0)
         .scaleEffect(expand ? 0.85 : 1.1)
         .animation(animations.pulseAnimation).onAppear {
             self.expand.toggle()
         }
     }
-    
-    
 }
