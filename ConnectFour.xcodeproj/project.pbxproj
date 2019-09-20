@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B2393CA2334ED490085FAAA /* PulsingButtonAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2393C92334ED490085FAAA /* PulsingButtonAnimations.swift */; };
 		0B36832C22DE029E006841F0 /* GameResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B36832B22DE029E006841F0 /* GameResult.swift */; };
 		0B66623D22DCF6AD00F93D8B /* GameOverAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B66623C22DCF6AD00F93D8B /* GameOverAlert.swift */; };
 		0B6D50DF22DCC41F002DB955 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B6D50DE22DCC41F002DB955 /* LaunchScreen.storyboard */; };
@@ -20,7 +21,7 @@
 		0B80594A22DBAA8C00A854CE /* TransparentBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B80594122DBAA8B00A854CE /* TransparentBoard.swift */; };
 		0B80594B22DBAA8C00A854CE /* RoundTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B80594222DBAA8B00A854CE /* RoundTile.swift */; };
 		0B80594C22DBAA8C00A854CE /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B80594322DBAA8C00A854CE /* GameState.swift */; };
-		0B80594D22DBAA8C00A854CE /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B80594422DBAA8C00A854CE /* FloatingButton.swift */; };
+		0B80594D22DBAA8C00A854CE /* PulsingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B80594422DBAA8C00A854CE /* PulsingButton.swift */; };
 		0B80594E22DBAA8C00A854CE /* GameConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B80594522DBAA8C00A854CE /* GameConfig.swift */; };
 		0B80594F22DBAA8C00A854CE /* TileState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B80594622DBAA8C00A854CE /* TileState.swift */; };
 		0B80595522DBAAB600A854CE /* BoardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B80595122DBAAB500A854CE /* BoardViewModel.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B2393C92334ED490085FAAA /* PulsingButtonAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulsingButtonAnimations.swift; sourceTree = "<group>"; };
 		0B36832B22DE029E006841F0 /* GameResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResult.swift; sourceTree = "<group>"; };
 		0B66623C22DCF6AD00F93D8B /* GameOverAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverAlert.swift; sourceTree = "<group>"; };
 		0B6D50DE22DCC41F002DB955 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,7 +59,7 @@
 		0B80594122DBAA8B00A854CE /* TransparentBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransparentBoard.swift; sourceTree = "<group>"; };
 		0B80594222DBAA8B00A854CE /* RoundTile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundTile.swift; sourceTree = "<group>"; };
 		0B80594322DBAA8C00A854CE /* GameState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
-		0B80594422DBAA8C00A854CE /* FloatingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
+		0B80594422DBAA8C00A854CE /* PulsingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulsingButton.swift; sourceTree = "<group>"; };
 		0B80594522DBAA8C00A854CE /* GameConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameConfig.swift; sourceTree = "<group>"; };
 		0B80594622DBAA8C00A854CE /* TileState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileState.swift; sourceTree = "<group>"; };
 		0B80595122DBAAB500A854CE /* BoardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardViewModel.swift; sourceTree = "<group>"; };
@@ -85,6 +87,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B2393CB2334EDF20085FAAA /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				0B2393C92334ED490085FAAA /* PulsingButtonAnimations.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
 		0B66623922DCEBD400F93D8B /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,10 +168,11 @@
 			children = (
 				0B80594022DBAA8B00A854CE /* RootView.swift */,
 				0B80594122DBAA8B00A854CE /* TransparentBoard.swift */,
-				0B80594422DBAA8C00A854CE /* FloatingButton.swift */,
+				0B80594422DBAA8C00A854CE /* PulsingButton.swift */,
 				0B80595322DBAAB500A854CE /* Column.swift */,
 				0B80594222DBAA8B00A854CE /* RoundTile.swift */,
 				0B66623C22DCF6AD00F93D8B /* GameOverAlert.swift */,
+				0B2393CB2334EDF20085FAAA /* Animations */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -301,7 +312,8 @@
 				0B80594722DBAA8C00A854CE /* WinChecker.swift in Sources */,
 				0B80594A22DBAA8C00A854CE /* TransparentBoard.swift in Sources */,
 				0B80594C22DBAA8C00A854CE /* GameState.swift in Sources */,
-				0B80594D22DBAA8C00A854CE /* FloatingButton.swift in Sources */,
+				0B2393CA2334ED490085FAAA /* PulsingButtonAnimations.swift in Sources */,
+				0B80594D22DBAA8C00A854CE /* PulsingButton.swift in Sources */,
 				0B80595522DBAAB600A854CE /* BoardViewModel.swift in Sources */,
 				0B36832C22DE029E006841F0 /* GameResult.swift in Sources */,
 			);

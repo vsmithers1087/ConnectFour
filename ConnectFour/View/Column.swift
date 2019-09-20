@@ -17,7 +17,7 @@ struct Column: View {
 
     var body: some View {
         VStack {
-            FloatingButton(tileState: tileState) {
+            PulsingButton(tileState: tileState) {
                 self.boardViewModel.dropTile(inColumn: self.column)
             }
             ForEach(tiles) {

@@ -8,47 +8,33 @@
 
 import SwiftUI
 
-struct FloatingButton: View {
+struct PulsingButton: View {
 
     @State private var expand = false
     @State private var dropping = false
     let tileState: TileState
     let action: () -> Void
-
-    private var animation: Animation {
-        Animation
-            .spring(response: 1)
-            .speed(1)
-            .repeatForever(autoreverses: false)
-    }
-    
-    private var dropAnimation: Animation {
-        Animation
-            .spring(response: 0.1)
-            .speed(1)
-    }
-    
-    private var actionAnimation: Animation {
-        Animation.easeIn
-            .speed(1)
-            .delay(0.1)
-    }
+    private let animations = PulsingButtonAnimations()
 
     var body: some View {
         Button(action: {
-            withAnimation(self.dropAnimation) {
+            withAnimation(self.animations.dropAnimation) {
                 self.dropping = true
+                self.expand.toggle()
             }
-            withAnimation(self.actionAnimation) {
+            withAnimation(self.animations.actionAnimation) {
                 self.action()
                 self.dropping = false
+            }
+            withAnimation(self.animations.pulseAnimation) {
+                self.expand.toggle()
             }
         }) {
             RoundTile(state: tileState)
         }
-        .offset(x: 0, y: dropping ? 200 : 0)
+        .offset(x: 0, y: dropping ? 300 : 0)
         .scaleEffect(expand ? 0.85 : 1.1)
-        .animation(animation).onAppear {
+        .animation(animations.pulseAnimation).onAppear {
             self.expand.toggle()
         }
     }
