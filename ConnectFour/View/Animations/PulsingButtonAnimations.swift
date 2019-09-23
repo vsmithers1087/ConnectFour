@@ -15,19 +15,17 @@ struct PulsingButtonAnimations {
             .easeInOut
             .speed(0.5)
             .delay(0.5)
-            .repeatForever(autoreverses: false)
+            .repeatForever(autoreverses: true)
+            .repeatCount(0)
     }
-       
+    
     var dropAnimation: Animation {
-        Animation
-            .easeIn
-            .speed(2)
+           Animation
+            .easeOut(duration: 2.0)
+            .repeatCount(2, autoreverses: true)
     }
-       
-    var actionAnimation: Animation {
-        Animation
-            .easeIn
-            .speed(0.5)
-            .delay(0.5)
+    
+    var delayReset: Animation {
+        Animation.easeIn.delay(2.0)
     }
 }

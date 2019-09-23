@@ -20,20 +20,14 @@ struct PulsingButton: View {
     var body: some View {
         Button(action: {
             withAnimation(self.animations.dropAnimation) {
-                self.dropping = true
-                self.expand.toggle()
-            }
-            withAnimation(self.animations.actionAnimation) {
                 self.action()
-                self.dropping = false
-            }
-            withAnimation(self.animations.pulseAnimation) {
-                self.expand.toggle()
+                self.dropping.toggle()
             }
         }) {
             RoundTile(state: tileState)
         }
         .offset(x: 0, y: dropping ? distanceToDrop : 0)
+        .opacity(dropping ? 0 : 1.0)
         .scaleEffect(expand ? 0.85 : 1.1)
         .animation(animations.pulseAnimation).onAppear {
             self.expand.toggle()
