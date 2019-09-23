@@ -10,7 +10,8 @@ import SwiftUI
 import Combine
 
 final class BoardViewModel: ObservableObject {
-
+    
+    private let tilesToWin: Int
     private var moveCount = 0
     @Published var board: Board
 
@@ -20,8 +21,9 @@ final class BoardViewModel: ObservableObject {
         }
     }
 
-    init(board: Board) {
+    init(board: Board, tilesToWin: Int) {
         self.board = board
+        self.tilesToWin = tilesToWin
     }
 
     func dropTile(inColumn column: Int) {
@@ -31,7 +33,7 @@ final class BoardViewModel: ObservableObject {
     }
 
     private func updateState(newTile: Tile) {
-        let winCheckResult = WinChecker(board: board, winningTile: newTile, moveCount: moveCount).result
+        let winCheckResult = WinChecker(board: board, winningTile: newTile, moveCount: moveCount, tilesToWin: tilesToWin).result
         switch winCheckResult {
         case .win(let tileState):
             state = .gameOver(.win(tileState))

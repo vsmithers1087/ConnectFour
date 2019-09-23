@@ -12,7 +12,7 @@ import SwiftUI
 final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-    var viewModel = BoardViewModel(board: Board(columns: config.columns, rows: config.rows))
+    var viewModel = BoardViewModel(board: Board(columns: config.columns, rows: config.rows), tilesToWin: config.tilesToWin)
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         if let windowScene = scene as? UIWindowScene {

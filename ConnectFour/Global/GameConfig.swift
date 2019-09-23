@@ -15,6 +15,12 @@ struct GameConfig {
     let vacantColor: Color
     let columns: Int
     let rows: Int
+    let tilesToWin: Int
 }
 
-let config = GameConfig(playerOneColor: Color.orange, playerTwoColor: Color.blue, vacantColor: Color.clear, columns: 7, rows: 6)
+let config = GameConfig(playerOneColor: Color.orange,
+                        playerTwoColor: Color.blue,
+                        vacantColor: Color.clear,
+                        columns: 7,
+                        rows: 6,
+                        tilesToWin: 4)

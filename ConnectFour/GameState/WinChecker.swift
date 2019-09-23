@@ -14,6 +14,7 @@ struct WinChecker {
     let board: Board
     let winningTile: Tile
     let moveCount: Int
+    let tilesToWin: Int
     var result: GameResult {
         return checkEndGame()
     }
@@ -36,12 +37,12 @@ struct WinChecker {
     /// Checks for four consecutive tiles matching `winningTile`
     /// - Parameter tiles: The possible winning tiles
     private func winningTiles(_ tiles: [Tile]) -> Bool {
-        guard tiles.count >= 4 else { return false }
+        guard tiles.count >= tilesToWin else { return false }
         var count = 0
         var isWin = false
         tiles.forEach { (t) in
             count = t.state == winningTile.state ? count + 1 : 0
-            if count == 4 {
+            if count == tilesToWin {
                 isWin = true
             }
         }
