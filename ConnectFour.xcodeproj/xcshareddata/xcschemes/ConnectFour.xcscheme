@@ -39,6 +39,16 @@
                ReferencedContainer = "container:ConnectFour.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0BF0935C233A271100741653"
+               BuildableName = "ConnectFourUITests.xctest"
+               BlueprintName = "ConnectFourUITests"
+               ReferencedContainer = "container:ConnectFour.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
