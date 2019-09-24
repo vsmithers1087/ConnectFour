@@ -20,11 +20,62 @@ class ConnectFourUITests: XCTestCase {
     func testIncompleteGame() {
         let app = XCUIApplication()
         app.launch()
-        for _ in 0...2 {
-            for element in 0...6 {
-                app.buttons.element(boundBy: element).tap()
+        (0...2).forEach { _ in
+            (0...6).forEach {
+                app.buttons.element(boundBy: $0).tap()
             }
         }
+    }
+    
+    func testPlayerOneWin() {
+        let app = XCUIApplication()
+        app.launch()
+        (0...2).forEach { _ in
+            app.buttons.element(boundBy: 0).tap()
+            app.buttons.element(boundBy: 1).tap()
+        }
+        app.buttons.element(boundBy: 0).tap()
+        XCTAssert(app.staticTexts["Player One Wins"].isHittable)
+    }
+    
+    func testPlayerTwoWin() {
+       let app = XCUIApplication()
+       app.launch()
+       (0...2).forEach { _ in
+           app.buttons.element(boundBy: 0).tap()
+           app.buttons.element(boundBy: 1).tap()
+       }
+       app.buttons.element(boundBy: 5).tap()
+       app.buttons.element(boundBy: 1).tap()
+       XCTAssert(app.staticTexts["Player Two Wins"].isHittable)
+    }
+    
+    func testDraw() {
+        let app = XCUIApplication()
+        app.launch()
+        (0...2).forEach { _ in
+           app.buttons.element(boundBy: 0).tap()
+           app.buttons.element(boundBy: 2).tap()
+           app.buttons.element(boundBy: 4).tap()
+           app.buttons.element(boundBy: 6).tap()
+        }
+        (0...2).forEach { _ in
+            app.buttons.element(boundBy: 1).tap()
+            app.buttons.element(boundBy: 3).tap()
+            app.buttons.element(boundBy: 5).tap()
+        }
+        (0...2).forEach { _ in
+            app.buttons.element(boundBy: 0).tap()
+            app.buttons.element(boundBy: 2).tap()
+            app.buttons.element(boundBy: 4).tap()
+            app.buttons.element(boundBy: 6).tap()
+        }
+        (0...2).forEach { _ in
+           app.buttons.element(boundBy: 1).tap()
+           app.buttons.element(boundBy: 3).tap()
+           app.buttons.element(boundBy: 5).tap()
+        }
+        XCTAssert(app.staticTexts["Draw!!"].isHittable)
     }
 
     func testLaunchPerformance() {
