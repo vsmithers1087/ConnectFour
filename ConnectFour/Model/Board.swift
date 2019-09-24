@@ -38,8 +38,14 @@ struct Board {
     
     /// 2D array for Tile coordinates
     private(set) var tiles = [[Tile]]()
+    private let columns: Int
+    private let rows: Int
 
     init(columns: Int, rows: Int) {
+        
+        self.columns = columns
+        self.rows = rows
+        
         for column in 0..<columns {
             var c = [Tile]()
             for row in 0..<rows {
@@ -52,11 +58,11 @@ struct Board {
 //MARK: - Get Tiles
     
     var tileCount: Int {
-        return tiles.count * tiles[0].count
+        return columns * rows
     }
 
     var columnCount: Int {
-        return tiles.count
+        return columns
     }
 
     func tilesFor(row: Int) -> [Tile] {
@@ -102,10 +108,10 @@ extension Board {
     /// - Parameter rowIncrement: The x slope of the diagnol
     private func adjacentDiagnols(column: Int, row: Int, colIncrement: Int, rowIncrement: Int) -> [Tile]? {
         guard
-            row + (rowIncrement * 3) >= 0,
-            row + (rowIncrement * 3) < tiles[0].count,
-            column + (colIncrement * 3) >= 0,
-            column + (colIncrement * 3) < tiles.count
+            row + (rowIncrement * (rows / 2)) >= 0,
+            row + (rowIncrement * (rows / 2)) < tiles[0].count,
+            column + (colIncrement * (columns / 2)) >= 0,
+            column + (colIncrement * (columns / 2)) < tiles.count
             else {
                 return nil
         }
