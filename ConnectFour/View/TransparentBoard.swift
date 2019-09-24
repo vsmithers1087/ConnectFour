@@ -12,25 +12,13 @@ struct TransparentBoard: View {
 
     @EnvironmentObject var viewModel: BoardViewModel
 
-    var showAlert: Bool {
-        if viewModel.state == .playerOneTurn ||
-            viewModel.state == .playerTwoTurn {
-            return false
-        }
-        return true
-    }
-
     var body: some View {
         HStack {
-            if showAlert {
-                GameOverAlert().environmentObject(viewModel)
-            } else {
-                ForEach(0..<viewModel.board.columnCount) {
-                    Column(tiles: self.viewModel.board.tilesFor(column: $0).reversed(),
-                           column: $0,
-                           tileState: self.viewModel.state.currentTile)
-                        .environmentObject(self.viewModel)
-                }
+            ForEach(0..<viewModel.board.columnCount) {
+                Column(tiles: self.viewModel.board.tilesFor(column: $0).reversed(),
+                       column: $0,
+                       tileState: self.viewModel.state.currentTile)
+                    .environmentObject(self.viewModel)
             }
         }.background(Color.clear)
             .padding()

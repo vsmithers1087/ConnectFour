@@ -10,13 +10,24 @@ import SwiftUI
 
 struct RootView: View {
 
-    @EnvironmentObject var boardViewModel: BoardViewModel
+    @EnvironmentObject var viewModel: BoardViewModel
+    
+    var gameResult: GameResult? {
+        if case GameState.gameOver(let result) = viewModel.state {
+            return result
+        }
+        return nil
+    }
 
     var body: some View {
         ZStack() {
-            Image("wallpaper").resizable()
-            .shadow(color: Color.purple, radius: 50)
-            TransparentBoard().environmentObject(boardViewModel)
+            if gameResult != nil {
+                GameOverAlert().environmentObject(viewModel)
+            } else {
+                Image("wallpaper").resizable()
+                .shadow(color: Color.purple, radius: 50)
+                TransparentBoard().environmentObject(viewModel)
+            }
         }
     }
 }
