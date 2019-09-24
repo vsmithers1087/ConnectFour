@@ -9,7 +9,23 @@
 import Foundation
 
 enum GameResult: Equatable {
+    
     case win(TileState)
     case draw
-    case inProgress
+    
+    var title: String {
+        switch self {
+        case .win(let state):
+            switch state {
+            case .playerOne:
+                return "Player One Wins"
+            case .playerTwo:
+                return "Player Two Wins"
+            default:
+                fatalError("Winning Tile Cannot Be Vacant!")
+            }
+        case .draw:
+            return "Draw!!"
+        }
+    }
 }

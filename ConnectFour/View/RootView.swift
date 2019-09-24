@@ -22,11 +22,14 @@ struct RootView: View {
     var body: some View {
         ZStack() {
             if gameResult != nil {
-                GameOverAlert().environmentObject(viewModel)
+                GameOverAlert(title: gameResult?.title)
+                    .environmentObject(viewModel)
             } else {
-                Image("wallpaper").resizable()
+                Image("wallpaper")
+                .resizable()
                 .shadow(color: Color.purple, radius: 50)
-                TransparentBoard().environmentObject(viewModel)
+                TransparentBoard()
+                    .environmentObject(viewModel)
             }
         }
     }

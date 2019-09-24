@@ -15,12 +15,12 @@ struct WinChecker {
     let winningTile: Tile
     let moveCount: Int
     let tilesToWin: Int
-    var result: GameResult {
+    var result: GameResult? {
         return checkEndGame()
     }
     
     /// Checks for all possible horizontal, vertical and diagnol wins. Returns `.inProgress` if win or draw are not reached
-    private func checkEndGame() -> GameResult {
+    private func checkEndGame() -> GameResult? {
         let horizontals = board.tilesFor(row: winningTile.row)
         let verticals = board.tilesFor(column: winningTile.column)
         let diagnolsAscending = board.tilesFor(diagnol: .acending, column: winningTile.column, row: winningTile.row)
@@ -31,7 +31,7 @@ struct WinChecker {
         if board.tileCount == moveCount {
             return .draw
         }
-        return .inProgress
+        return nil
     }
     
     /// Checks for four consecutive tiles matching `winningTile`

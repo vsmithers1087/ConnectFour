@@ -39,7 +39,7 @@ final class BoardViewModel: ObservableObject {
             state = .gameOver(.win(tileState))
         case .draw:
             state = .gameOver(.draw)
-        case .inProgress:
+        case .none:
             state = state.nextTurn()
         }
     }
