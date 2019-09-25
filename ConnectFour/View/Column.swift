@@ -19,7 +19,7 @@ struct Column: View {
         VStack {
             PulsingButton(tileState: self.tileState) {
                 self.boardViewModel.dropTile(inColumn: self.column)
-            }.accessibility(label: Text("PulsingButton:\(column)"))
+            }
             ForEach(tiles) {
                 RoundTile(state: $0.state)
             }
