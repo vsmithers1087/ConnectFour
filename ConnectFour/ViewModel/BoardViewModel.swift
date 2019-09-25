@@ -11,16 +11,11 @@ import Combine
 
 final class BoardViewModel: ObservableObject {
     
+    @Published var board: Board
     private let tilesToWin: Int
     private var moveCount = 0
-    @Published var board: Board
-
-    var state: GameState = .playerOneTurn {
-        didSet {
-            moveCount += 1
-        }
-    }
-
+    var state: GameState = .playerOneTurn
+    
     init(board: Board, tilesToWin: Int) {
         self.board = board
         self.tilesToWin = tilesToWin
@@ -28,6 +23,7 @@ final class BoardViewModel: ObservableObject {
 
     func dropTile(inColumn column: Int) {
         if let tile = board.addTile(inColumn: column, forState: state.currentTile) {
+            moveCount += 1
             updateState(newTile: tile)
         }
     }

@@ -28,7 +28,7 @@ struct WinChecker {
         if winningTiles(horizontals) || winningTiles(verticals) || winningTiles(diagnolsAscending) || winningTiles(diagnolsDescending) {
              return .win(winningTile.state)
         }
-        if moveCount >= board.tileCount {
+        if moveCount == board.tileCount {
             return .draw
         }
         return nil

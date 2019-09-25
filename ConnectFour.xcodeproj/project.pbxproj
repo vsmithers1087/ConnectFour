@@ -532,6 +532,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z9GGFL7AD3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ConnectFour/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -550,6 +551,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z9GGFL7AD3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ConnectFour/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
