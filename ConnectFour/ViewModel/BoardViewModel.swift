@@ -14,7 +14,14 @@ final class BoardViewModel: ObservableObject {
     @Published var board: Board
     private let tilesToWin: Int
     private var moveCount = 0
-    var state: GameState = .playerOneTurn
+    var state: GameState = .playerOneTurn {
+        didSet {
+            if state == .playerTwoTurn {
+                let randomColumn = Int.random(in: 0...board.columnCount - 1)
+                dropTile(inColumn: randomColumn)
+            }
+        }
+    }
     
     init(board: Board, tilesToWin: Int) {
         self.board = board

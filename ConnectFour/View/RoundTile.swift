@@ -23,8 +23,7 @@ struct RoundTile: View {
                 .fill(state.color)
             Circle()
                 .stroke(Color.purple, lineWidth: 3)
-            state.image
-                .foregroundColor(Color.white)
+            Text(state.title)
         }
         .scaleEffect(shouldAnimate ? 1.5: 1.0)
         .opacity(shouldAnimate ? 0.1 : 1.0)

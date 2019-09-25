@@ -25,6 +25,17 @@ enum TileState {
             return config.vacantColor
         }
     }
+    
+    var title: String {
+        switch self {
+        case .playerOne:
+            return "🐒"
+        case .playerTwo:
+            return "🧚‍♀️"
+        default:
+            return ""
+        }
+    }
 
     var image: Image {
         switch self {
