@@ -13,7 +13,7 @@ struct PulsingButton: View {
     @State private var expand = false
     let tileState: TileState
     let action: () -> Void
-    private let animations = PulsingButtonAnimations()
+    private let animations = TileAnimations()
 
     var body: some View {
         Button(action: {

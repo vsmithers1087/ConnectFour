@@ -10,7 +10,12 @@ import SwiftUI
 
 struct RoundTile: View {
 
+    @State private var expand = true
     let state: TileState
+    private let animations = TileAnimations()
+    private var shouldAnimate: Bool {
+        return state != .vacant && expand
+    }
 
     var body: some View {
         ZStack {
@@ -20,6 +25,13 @@ struct RoundTile: View {
                 .stroke(Color.purple, lineWidth: 3)
             state.image
                 .foregroundColor(Color.white)
+        }
+        .scaleEffect(shouldAnimate ? 1.5: 1.0)
+        .opacity(shouldAnimate ? 0.1 : 1.0)
+        .animation(animations.dropAnimation).onAppear {
+            if self.shouldAnimate {
+                self.expand = false
+            }
         }
     }
 }

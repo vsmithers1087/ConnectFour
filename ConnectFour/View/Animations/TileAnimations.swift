@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct PulsingButtonAnimations {
+struct TileAnimations {
     
     var pulseAnimation: Animation {
         Animation
@@ -19,7 +19,8 @@ struct PulsingButtonAnimations {
     }
     
     var dropAnimation: Animation {
-           Animation
-            .easeOut(duration: 0.5)
+        Animation
+            .easeOut(duration: 1.0)
+            .repeatCount(1, autoreverses: true)
     }
 }

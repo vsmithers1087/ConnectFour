@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B2393CA2334ED490085FAAA /* PulsingButtonAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2393C92334ED490085FAAA /* PulsingButtonAnimations.swift */; };
+		0B2393CA2334ED490085FAAA /* TileAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2393C92334ED490085FAAA /* TileAnimations.swift */; };
 		0B36832C22DE029E006841F0 /* GameResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B36832B22DE029E006841F0 /* GameResult.swift */; };
 		0B66623D22DCF6AD00F93D8B /* GameOverAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B66623C22DCF6AD00F93D8B /* GameOverAlert.swift */; };
 		0B6D50DF22DCC41F002DB955 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B6D50DE22DCC41F002DB955 /* LaunchScreen.storyboard */; };
@@ -49,7 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0B2393C92334ED490085FAAA /* PulsingButtonAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulsingButtonAnimations.swift; sourceTree = "<group>"; };
+		0B2393C92334ED490085FAAA /* TileAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileAnimations.swift; sourceTree = "<group>"; };
 		0B36832B22DE029E006841F0 /* GameResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResult.swift; sourceTree = "<group>"; };
 		0B66623C22DCF6AD00F93D8B /* GameOverAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverAlert.swift; sourceTree = "<group>"; };
 		0B6D50DE22DCC41F002DB955 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -109,7 +109,7 @@
 		0B2393CB2334EDF20085FAAA /* Animations */ = {
 			isa = PBXGroup;
 			children = (
-				0B2393C92334ED490085FAAA /* PulsingButtonAnimations.swift */,
+				0B2393C92334ED490085FAAA /* TileAnimations.swift */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -373,7 +373,7 @@
 				0B80594722DBAA8C00A854CE /* WinChecker.swift in Sources */,
 				0B80594A22DBAA8C00A854CE /* TransparentBoard.swift in Sources */,
 				0B80594C22DBAA8C00A854CE /* GameState.swift in Sources */,
-				0B2393CA2334ED490085FAAA /* PulsingButtonAnimations.swift in Sources */,
+				0B2393CA2334ED490085FAAA /* TileAnimations.swift in Sources */,
 				0B80594D22DBAA8C00A854CE /* PulsingButton.swift in Sources */,
 				0B80595522DBAAB600A854CE /* BoardViewModel.swift in Sources */,
 				0B36832C22DE029E006841F0 /* GameResult.swift in Sources */,
