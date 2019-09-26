@@ -9,10 +9,10 @@
 import SwiftUI
 
 struct GameOverAlert: View {
-
-    @EnvironmentObject var viewModel: BoardViewModel
+    
     let title: String
     let tileState: TileState
+    let action: () -> Void
 
     var body: some View {
         VStack {
@@ -26,7 +26,7 @@ struct GameOverAlert: View {
             RoundedButton(title: "Reset Game",
                           backgroundColor: config.primaryColor,
                           foregroundColor: config.secondaryColor,
-                          font: .largeTitle) { self.viewModel.resetGame() }
+                          font: .largeTitle) { self.action() }
             .offset(x: 0, y: 50)
         }
     }

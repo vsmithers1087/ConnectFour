@@ -22,9 +22,11 @@ struct RootView: View {
     var body: some View {
         ZStack() {
             if gameResult != nil {
-                GameOverAlert(title: gameResult!.title,
-                    tileState: gameResult!.winningTile)
-                    .environmentObject(viewModel)
+                GameOverAlert(title: gameResult?.title ?? "",
+                              tileState: gameResult?.winningTile ?? .vacant,
+                              action:{
+                                self.viewModel.resetGame()
+                })
             } else {
                 Image("wallpaper")
                 .resizable()
