@@ -23,7 +23,7 @@ struct GameOverAlert: View {
                 RoundTile(state: tileState)
                     .frame(width: 100, height: 100, alignment: .center)
             }
-            RoundedButton(title: "Reset Game",
+            RoundButton(title: "Reset Game",
                           backgroundColor: config.primaryColor,
                           foregroundColor: config.secondaryColor,
                           font: .largeTitle) { self.viewModel.resetGame() }

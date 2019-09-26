@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct RoundedButton: View {
+struct RoundButton: View {
 
     let title: String
     let backgroundColor: Color

@@ -24,6 +24,17 @@ enum GameState: Equatable {
             return .vacant
         }
     }
+    
+    var title: String {
+        switch self {
+        case .playerOneTurn:
+            return "Player One Turn"
+        case .playerTwoTurn:
+            return "Player Two Turn"
+        default:
+            return ""
+        }
+    }
 
     func nextTurn() -> GameState {
         switch self {

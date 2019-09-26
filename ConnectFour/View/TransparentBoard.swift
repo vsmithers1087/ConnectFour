@@ -16,8 +16,7 @@ struct TransparentBoard: View {
         HStack {
             ForEach(0..<viewModel.board.columnCount) { columnIdx in
                 Column(tiles: self.viewModel.tilesAt(index: columnIdx),
-                       column: columnIdx,
-                       action: {
+                       column: columnIdx, action: {
                         self.viewModel.dropTile(inColumn: columnIdx)
                 })
             }

@@ -29,9 +29,15 @@ struct RootView: View {
                 Image("wallpaper")
                     .resizable()
                     .shadow(color: config.primaryColor, radius: 50)
-                TransparentBoard()
-                    .environmentObject(viewModel)
+                    TransparentBoard()
+                                   .environmentObject(viewModel)
+                GeometryReader { geometry in
+                    CurrentPlayerLabel(gameState: self.viewModel.state)
+                        .offset(x: 0, y: -geometry.size.height * 0.33)
+                }
             }
         }
     }
 }
+
+

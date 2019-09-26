@@ -28,7 +28,8 @@
 		0B80595622DBAAB600A854CE /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B80595222DBAAB500A854CE /* Board.swift */; };
 		0B80595722DBAAB600A854CE /* Column.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B80595322DBAAB500A854CE /* Column.swift */; };
 		0BA02DA6233CAE6900951565 /* PlayerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA02DA5233CAE6900951565 /* PlayerConfig.swift */; };
-		0BA02DA8233CB86500951565 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA02DA7233CB86500951565 /* RoundedButton.swift */; };
+		0BA02DA8233CB86500951565 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA02DA7233CB86500951565 /* RoundButton.swift */; };
+		0BA02DAA233CC73C00951565 /* CurrentPlayerLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA02DA9233CC73C00951565 /* CurrentPlayerLabel.swift */; };
 		0BF09360233A271100741653 /* ConnectFourUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF0935F233A271100741653 /* ConnectFourUITests.swift */; };
 		0BFD9AD222F08616002DED79 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFD9AD122F08616002DED79 /* Tile.swift */; };
 /* End PBXBuildFile section */
@@ -77,7 +78,8 @@
 		0B80595322DBAAB500A854CE /* Column.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Column.swift; sourceTree = "<group>"; };
 		0B9B4BFF2332610800B09D13 /* ConnectFourTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = ConnectFourTests.xctestplan; sourceTree = "<group>"; };
 		0BA02DA5233CAE6900951565 /* PlayerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerConfig.swift; sourceTree = "<group>"; };
-		0BA02DA7233CB86500951565 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		0BA02DA7233CB86500951565 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		0BA02DA9233CC73C00951565 /* CurrentPlayerLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentPlayerLabel.swift; sourceTree = "<group>"; };
 		0BF0935D233A271100741653 /* ConnectFourUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConnectFourUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BF0935F233A271100741653 /* ConnectFourUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectFourUITests.swift; sourceTree = "<group>"; };
 		0BF09361233A271100741653 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -197,7 +199,8 @@
 				0B80595322DBAAB500A854CE /* Column.swift */,
 				0B80594222DBAA8B00A854CE /* RoundTile.swift */,
 				0B66623C22DCF6AD00F93D8B /* GameOverAlert.swift */,
-				0BA02DA7233CB86500951565 /* RoundedButton.swift */,
+				0BA02DA9233CC73C00951565 /* CurrentPlayerLabel.swift */,
+				0BA02DA7233CB86500951565 /* RoundButton.swift */,
 				0B2393CB2334EDF20085FAAA /* Animations */,
 			);
 			path = View;
@@ -369,10 +372,11 @@
 				0B66623D22DCF6AD00F93D8B /* GameOverAlert.swift in Sources */,
 				0B80590F22DBAA4200A854CE /* AppDelegate.swift in Sources */,
 				0B80594F22DBAA8C00A854CE /* TileState.swift in Sources */,
-				0BA02DA8233CB86500951565 /* RoundedButton.swift in Sources */,
+				0BA02DA8233CB86500951565 /* RoundButton.swift in Sources */,
 				0BFD9AD222F08616002DED79 /* Tile.swift in Sources */,
 				0B80595622DBAAB600A854CE /* Board.swift in Sources */,
 				0B80594E22DBAA8C00A854CE /* GameConfig.swift in Sources */,
+				0BA02DAA233CC73C00951565 /* CurrentPlayerLabel.swift in Sources */,
 				0B80591122DBAA4200A854CE /* SceneDelegate.swift in Sources */,
 				0B80595722DBAAB600A854CE /* Column.swift in Sources */,
 				0B80594922DBAA8C00A854CE /* RootView.swift in Sources */,
