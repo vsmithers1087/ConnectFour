@@ -27,7 +27,7 @@ struct RootView: View {
             } else {
                 Image("wallpaper")
                 .resizable()
-                .shadow(color: Color.purple, radius: 50)
+                .shadow(color: config.primaryColor, radius: 50)
                 TransparentBoard()
                     .environmentObject(viewModel)
             }

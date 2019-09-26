@@ -18,20 +18,20 @@ enum TileState {
     var color: Color {
         switch self {
         case .playerOne:
-            return config.playerOneColor
+            return config.playerOneConfig.color
         case .playerTwo:
-            return config.playerTwoColor
+            return config.playerTwoConfig.color
         case .vacant:
-            return config.vacantColor
+            return .clear
         }
     }
 
     var image: Image {
         switch self {
         case .playerOne:
-            return Image(systemName: "tortoise")
+            return config.playerOneConfig.image
         case .playerTwo:
-            return Image(systemName: "hare")
+            return config.playerTwoConfig.image
         case .vacant:
             return Image(uiImage: UIImage())
         }

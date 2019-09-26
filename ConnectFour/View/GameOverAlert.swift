@@ -16,7 +16,7 @@ struct GameOverAlert: View {
     var body: some View {
         VStack {
             Text(title ?? "")
-                .foregroundColor(Color.white)
+                .foregroundColor(config.secondaryColor)
                 .font(.largeTitle)
                 .frame(width: 300, height: 300, alignment: .center)
                 .background(Color.red)
@@ -28,7 +28,7 @@ struct GameOverAlert: View {
                 Text("Reset Game")
                     .padding()
                     .background(Color.green)
-                    .foregroundColor(Color.white)
+                    .foregroundColor(config.secondaryColor)
                     .font(.largeTitle)
             }.offset(x: 0, y: 50)
         }
