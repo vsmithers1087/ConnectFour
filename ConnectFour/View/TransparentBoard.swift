@@ -14,14 +14,16 @@ struct TransparentBoard: View {
 
     var body: some View {
         HStack {
-            ForEach(0..<viewModel.board.columnCount) {
-                Column(tiles: self.viewModel.board.tilesFor(column: $0).reversed(),
-                       column: $0,
-                       tileState: self.viewModel.state.currentTile)
-                    .environmentObject(self.viewModel)
+            ForEach(0..<viewModel.board.columnCount) { columnIdx in
+                Column(tiles: self.viewModel.tilesAt(index: columnIdx),
+                       column: columnIdx,
+                       action: {
+                        self.viewModel.dropTile(inColumn: columnIdx)
+                })
             }
         }.background(Color.clear)
             .padding()
             .aspectRatio(1, contentMode: .fit)
+            
     }
 }

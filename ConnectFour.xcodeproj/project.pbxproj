@@ -197,8 +197,8 @@
 				0B80595322DBAAB500A854CE /* Column.swift */,
 				0B80594222DBAA8B00A854CE /* RoundTile.swift */,
 				0B66623C22DCF6AD00F93D8B /* GameOverAlert.swift */,
-				0B2393CB2334EDF20085FAAA /* Animations */,
 				0BA02DA7233CB86500951565 /* RoundedButton.swift */,
+				0B2393CB2334EDF20085FAAA /* Animations */,
 			);
 			path = View;
 			sourceTree = "<group>";

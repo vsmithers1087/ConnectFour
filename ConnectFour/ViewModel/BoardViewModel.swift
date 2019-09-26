@@ -20,6 +20,10 @@ final class BoardViewModel: ObservableObject {
         self.board = board
         self.tilesToWin = tilesToWin
     }
+    
+    func tilesAt(index: Int) -> [Tile] {
+        board.tilesFor(column: index).reversed()
+    }
 
     func dropTile(inColumn column: Int) {
         if let tile = board.addTile(inColumn: column, forState: state.currentTile) {

@@ -10,18 +10,18 @@ import SwiftUI
 
 struct Column: View {
 
-    @EnvironmentObject var boardViewModel: BoardViewModel
     let tiles: [Tile]
     let column: Int
-    let tileState: TileState
+    let action: () -> Void
     
     var body: some View {
         VStack {
-            PulsingButton(tileState: self.tileState) {
-                self.boardViewModel.dropTile(inColumn: self.column)
-            }
-            ForEach(tiles) {
-                RoundTile(state: $0.state)
+            ForEach(tiles) { tile in
+                Button(action: {
+                    self.action()
+                }) {
+                    RoundTile(state: tile.state)
+                }
             }
         }.background(Color.clear)
     }

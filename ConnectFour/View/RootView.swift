@@ -23,12 +23,12 @@ struct RootView: View {
         ZStack() {
             if gameResult != nil {
                 GameOverAlert(title: gameResult!.title,
-                    tileState: gameResult!.winningTile)
+                              tileState: gameResult!.winningTile)
                     .environmentObject(viewModel)
             } else {
                 Image("wallpaper")
-                .resizable()
-                .shadow(color: config.primaryColor, radius: 50)
+                    .resizable()
+                    .shadow(color: config.primaryColor, radius: 50)
                 TransparentBoard()
                     .environmentObject(viewModel)
             }
