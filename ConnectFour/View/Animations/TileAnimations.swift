@@ -20,7 +20,8 @@ struct TileAnimations {
     
     var dropAnimation: Animation {
         Animation
-            .easeOut(duration: 1.0)
-            .repeatCount(1, autoreverses: true)
+            .easeIn(duration: 0.6)
+            .speed(1.5)
+            .repeatCount(1)
     }
 }

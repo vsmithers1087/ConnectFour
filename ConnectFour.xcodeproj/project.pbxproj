@@ -30,6 +30,7 @@
 		0BA02DA6233CAE6900951565 /* PlayerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA02DA5233CAE6900951565 /* PlayerConfig.swift */; };
 		0BA02DA8233CB86500951565 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA02DA7233CB86500951565 /* RoundedButton.swift */; };
 		0BF09360233A271100741653 /* ConnectFourUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF0935F233A271100741653 /* ConnectFourUITests.swift */; };
+		0BF8B54E233CF20300FC66B9 /* DroppingTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF8B54D233CF20300FC66B9 /* DroppingTile.swift */; };
 		0BFD9AD222F08616002DED79 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFD9AD122F08616002DED79 /* Tile.swift */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,7 @@
 		0BF0935F233A271100741653 /* ConnectFourUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectFourUITests.swift; sourceTree = "<group>"; };
 		0BF09361233A271100741653 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0BF09367233A280300741653 /* ConnectFourUITests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = ConnectFourUITests.xctestplan; sourceTree = "<group>"; };
+		0BF8B54D233CF20300FC66B9 /* DroppingTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroppingTile.swift; sourceTree = "<group>"; };
 		0BFD9AD122F08616002DED79 /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -199,6 +201,7 @@
 				0B66623C22DCF6AD00F93D8B /* GameOverAlert.swift */,
 				0BA02DA7233CB86500951565 /* RoundedButton.swift */,
 				0B2393CB2334EDF20085FAAA /* Animations */,
+				0BF8B54D233CF20300FC66B9 /* DroppingTile.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				0BA02DA8233CB86500951565 /* RoundedButton.swift in Sources */,
 				0BFD9AD222F08616002DED79 /* Tile.swift in Sources */,
 				0B80595622DBAAB600A854CE /* Board.swift in Sources */,
+				0BF8B54E233CF20300FC66B9 /* DroppingTile.swift in Sources */,
 				0B80594E22DBAA8C00A854CE /* GameConfig.swift in Sources */,
 				0B80591122DBAA4200A854CE /* SceneDelegate.swift in Sources */,
 				0B80595722DBAAB600A854CE /* Column.swift in Sources */,
