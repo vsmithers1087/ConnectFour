@@ -14,11 +14,13 @@ struct TransparentBoard: View {
 
     var body: some View {
         HStack {
-            ForEach(0..<viewModel.board.columnCount) {
-                Column(tiles: self.viewModel.board.tilesFor(column: $0).reversed(),
-                       column: $0,
-                       tileState: self.viewModel.state.currentTile)
-                    .environmentObject(self.viewModel)
+            ForEach(0..<viewModel.board.columnCount) { columnIdx in
+                VStack {
+                    PulsingButton(tileState: self.viewModel.state.currentTile) {
+                        self.viewModel.dropTile(inColumn: columnIdx)
+                    }
+                    Column(tiles: self.viewModel.tilesAt(index: columnIdx))
+                }
             }
         }.background(Color.clear)
             .padding()
