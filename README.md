@@ -1,5 +1,9 @@
 # ConnectFour
 
+<img width="300" alt="gameplay" src="https://user-images.githubusercontent.com/12777139/65696432-7f205200-e079-11e9-8e3e-9af0fe78ee27.png">
+
+## About
+
 A simple Connect Four game which I hope demonstrates the basics of SwiftUI and Combine beyond a typical list-based application. Through this project, I have learned that the upsides of using SwiftUI outside of an orthodox single view application are pretty great. 
 
 While still a work in progress, by viewing this demo it is possible to see in practice the basic of animations and reusing simple components to build more complex custom user interfaces, as well as UITests with SwiftUI, and Xcode 11 Test Plans.
