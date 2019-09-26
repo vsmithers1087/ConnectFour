@@ -11,26 +11,23 @@ import SwiftUI
 struct GameOverAlert: View {
 
     @EnvironmentObject var viewModel: BoardViewModel
-    let title: String?
+    let title: String
+    let tileState: TileState
 
     var body: some View {
         VStack {
-            Text(title ?? "")
-                .foregroundColor(config.secondaryColor)
-                .font(.largeTitle)
-                .frame(width: 300, height: 300, alignment: .center)
-                .background(Color.red)
-                .clipShape(Circle())
-                .offset(x: 0, y: 50)
-            Button(action: {
-                self.viewModel.resetGame()
-            }) {
-                Text("Reset Game")
-                    .padding()
-                    .background(Color.green)
-                    .foregroundColor(config.secondaryColor)
-                    .font(.largeTitle)
-            }.offset(x: 0, y: 50)
+            VStack {
+                Text(title)
+                    .foregroundColor(config.primaryColor)
+                    .font(.largeTitle).bold()
+                RoundTile(state: tileState)
+                    .frame(width: 100, height: 100, alignment: .center)
+            }
+            RoundedButton(title: "Reset Game",
+                          backgroundColor: config.primaryColor,
+                          foregroundColor: config.secondaryColor,
+                          font: .largeTitle) { self.viewModel.resetGame() }
+            .offset(x: 0, y: 50)
         }
     }
 }

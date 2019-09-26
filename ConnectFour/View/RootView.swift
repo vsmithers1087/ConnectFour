@@ -22,7 +22,8 @@ struct RootView: View {
     var body: some View {
         ZStack() {
             if gameResult != nil {
-                GameOverAlert(title: gameResult?.title)
+                GameOverAlert(title: gameResult!.title,
+                    tileState: gameResult!.winningTile)
                     .environmentObject(viewModel)
             } else {
                 Image("wallpaper")

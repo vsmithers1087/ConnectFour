@@ -13,6 +13,15 @@ enum GameResult: Equatable {
     case win(TileState)
     case draw
     
+    var winningTile: TileState {
+        switch self {
+        case .win(let state):
+            return state
+        case .draw:
+            return .vacant
+        }
+    }
+    
     var title: String {
         switch self {
         case .win(let state):
