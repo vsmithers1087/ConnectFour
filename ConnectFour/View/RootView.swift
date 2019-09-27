@@ -28,7 +28,7 @@ struct RootView: View {
                                 self.viewModel.resetGame()
                 })
             } else {
-                Image("wallpaper")
+                config.backgroundImage
                 .resizable()
                 .shadow(color: config.primaryColor, radius: 50)
                 TransparentBoard()

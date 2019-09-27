@@ -16,6 +16,7 @@ struct GameConfig {
     let tilesToWin: Int
     let primaryColor: Color
     let secondaryColor: Color
+    let backgroundImage: Image
 }
 
 

@@ -9,14 +9,6 @@
 import UIKit
 import SwiftUI
 
-let config = GameConfig(playerOneConfig: PlayerConfig(color: .orange, image: Image(systemName: "tortoise")),
-                        playerTwoConfig: PlayerConfig(color: .blue, image: Image(systemName: "hare")),
-                        columns: 7,
-                        rows: 6,
-                        tilesToWin: 4,
-                        primaryColor: .purple,
-                        secondaryColor: .white)
-
 final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
