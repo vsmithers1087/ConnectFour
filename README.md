@@ -2,8 +2,6 @@
 
 <img width="300" alt="gameplay" src="https://user-images.githubusercontent.com/12777139/65696432-7f205200-e079-11e9-8e3e-9af0fe78ee27.png">
 
-[View Screen Recording of Gameplay](https://twitter.com/Max_Belvedere/status/1177533250715213830)
-
 ## About
 
 A simple Connect Four game built entirely with SwiftUI. Through working on this project, I have learned that the upsides of using SwiftUI outside of an orthodox single view application are pretty great. While still a work in progress, by viewing this demo it is possible to see in practice the basics of animations and reusing simple components to build more complex custom user interfaces.
