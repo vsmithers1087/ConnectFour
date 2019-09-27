@@ -6,7 +6,7 @@
 
 ## About
 
-A simple Connect Four built entirely with SwiftUI. Through working on this project, I have learned that the upsides of using SwiftUI outside of an orthodox single view application are pretty great. While still a work in progress, by viewing this demo it is possible to see in practice the basic of animations and reusing simple components to build more complex custom user interfaces.
+A simple Connect Four game built entirely with SwiftUI. Through working on this project, I have learned that the upsides of using SwiftUI outside of an orthodox single view application are pretty great. While still a work in progress, by viewing this demo it is possible to see in practice the basic of animations and reusing simple components to build more complex custom user interfaces.
 
 You can modify the configuration in `Config.swift` to change everything from the appearance to board dimensions, and the number of tiles required to win.
 ```swift
